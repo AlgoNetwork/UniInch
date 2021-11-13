@@ -1,0 +1,1523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="images/favicon.ico">
+
+    <title>UniInch- Swap with best price between uniswap,sushiswap,pancakeswap,quickswap on Binance,Polygon,Fantom,Avalanche.. </title>
+  
+	<!-- Vendors Style-->
+	<link rel="stylesheet" href="css/vendors_css.css">
+	  
+	<!-- Style-->    
+	<link rel="stylesheet" href="css/horizontal-menu.css"> 
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/skin_color.css">	
+
+
+<style type="text/css">
+
+
+
+    #loader1 {
+  width: 200px;
+  display: none;
+}
+
+</style>
+</head>
+<body class="layout-top-nav dark-skin theme-warning fixed">
+	
+<div class="wrapper">
+	<div id="loader"></div>
+
+  <header class="main-header">
+	  <div class="inside-header">
+		<div class="d-flex align-items-center logo-box justify-content-start">
+			<!-- Logo -->
+			<a href="index.html" class="logo">
+			  <!-- logo-->
+			  <div class="logo-lg">
+				  <span class="light-logo"><img src="images/logo-dark-text.png" alt="logo"></span>
+				  <span class="dark-logo"><img src="images/logo-light-text.png" alt="logo"></span>
+			  </div>
+			</a>	
+		</div>  
+		<!-- Header Navbar -->
+		<nav class="navbar navbar-static-top">
+		  <div class="app-menu">
+			<ul class="header-megamenu nav">
+				
+
+<!--
+				<li class="btn-group nav-item d-none d-xl-inline-block">
+					<a href="contact_app_chat.html" class="waves-effect waves-light nav-link svg-bt-icon btn-primary-light" title="Chat">
+						<i data-feather="message-circle"></i>
+					</a>
+				</li>
+				<li class="btn-group nav-item d-none d-xl-inline-block">
+					<a href="mailbox.html" class="waves-effect waves-light nav-link svg-bt-icon btn-primary-light" title="Mailbox">
+						<i data-feather="at-sign"></i>
+					</a>
+				
+				<li class="btn-group nav-item d-none d-xl-inline-block">
+					<a href="extra_taskboard.html" class="waves-effect waves-light nav-link svg-bt-icon btn-primary-light" title="Taskboard">
+						<i data-feather="clipboard"></i>
+					</a>
+				</li>
+				 -->
+
+
+
+
+
+
+
+
+				
+			</ul> 
+		  </div>
+
+		  <div class="navbar-custom-menu r-side">
+			<ul class="nav navbar-nav">		  
+				
+
+<!--
+				<li class="btn-group d-lg-inline-flex d-none">
+					<div class="app-menu">
+						<div class="search-bx mx-5">
+							<form>
+								<div class="input-group">
+								  <input type="search" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="button-addon2">
+								  <div class="input-group-append">
+									<button class="btn" type="submit" id="button-addon3"><i data-feather="search"></i></button>
+								  </div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</li>
+-->
+
+<div class="d-flex align-items-center justify-content-center"  >
+<li class="btn-group nav-item d-none d-xl-inline-block" >
+
+<!--
+				<select id = "ChooseNetworkSelect" class="custom-select  "   onchange="ChangeNetwork()">
+				     <option    value="43114">Avalanche</option>
+  					 <option   value="137">Polygon</option>
+                   <option   value="56">Binance</option>   
+                 <option  value="250">Fantom</option> 
+                 <option  value="128">Heco</option> 
+				 </select>	
+-->
+ 
+<div class="dropdown">
+
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="SelectNetworkDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+  
+    Select Network
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+
+  <li> 
+  <a href="#" onclick="return ChangeNetwork('Avalanche');"><img src="images/network/avalanche.png" width="25" height="25"> Avalanche</a>
+  </li>
+<br>
+  <li> 
+  <a href="#" onclick="return ChangeNetwork('Polygon');"><img src="images/network/polygon.png" width="25" height="25"> Polygon</a>
+  </li>
+<br>
+
+    <li> 
+  <a href="#" onclick="return ChangeNetwork('Binance');"><img src="images/network/binance.png" width="25" height="25"> Binance</a>
+  </li>
+<br>
+
+    <li> 
+  <a href="#" onclick="return ChangeNetwork('Fantom');"><img src="images/network/fantom.png" width="25" height="25"> Fantom</a>
+  </li>
+<br>
+
+    <li> 
+  <a href="#" onclick="return ChangeNetwork('Heco');"><img src="images/network/heco.png" width="25" height="25"> Heco</a>
+  </li>
+
+    
+
+
+  <!--
+   <button  type="button"  onclick="ChangeNetwork('Avalanche')" class="btn btn-secondary"> <img src="images/network/avalanche.png" width="25" height="25">  Avalanche 
+   </button>  
+  </li>
+-->
+
+
+
+  </ul>
+</div> 
+				
+				
+
+	 		
+<li class="btn-group nav-item d-none d-xl-inline-block" >
+				<a href="#" class="waves-effect waves-light nav-link  btn-primary-light" title="Address">
+						<div id="CurrentAddress"></div>
+			    </a>				
+                </li>
+ 
+
+
+				<li class="btn-group nav-item d-lg-inline-flex d-none">
+					<a href="#" data-provide="fullscreen" class="waves-effect waves-light nav-link full-screen btn-primary-light" title="Full Screen">
+						<i data-feather="maximize"></i>
+					</a>
+				</li>
+
+
+
+			  <!-- Notifications 
+			  <li class="dropdown notifications-menu">
+				<a href="#" class="waves-effect waves-light dropdown-toggle btn-primary-light" data-bs-toggle="dropdown" title="Notifications">
+				  <i data-feather="bell"></i>
+				</a>
+				<ul class="dropdown-menu animated bounceIn">
+
+				  <li class="header">
+					<div class="p-20">
+						<div class="flexbox">
+							<div>
+								<h4 class="mb-0 mt-0">Notifications</h4>
+							</div>
+							<div>
+								<a href="#" class="text-danger">Clear All</a>
+							</div>
+						</div>
+					</div>
+				  </li>
+
+				  <li>
+				 inner menu: contains the actual data  
+					<ul class="menu sm-scrol">
+					  <li>
+						<a href="#">
+						  <i class="fa fa-users text-info"></i> Curabitur id eros quis nunc suscipit blandit.
+						</a>
+					  </li>
+					  <li>
+						<a href="#">
+						  <i class="fa fa-warning text-warning"></i> Duis malesuada justo eu sapien elementum, in semper diam posuere.
+						</a>
+					  </li>
+					  <li>
+						<a href="#">
+						  <i class="fa fa-users text-danger"></i> Donec at nisi sit amet tortor commodo porttitor pretium a erat.
+						</a>
+					  </li>
+					  <li>
+						<a href="#">
+						  <i class="fa fa-shopping-cart text-success"></i> In gravida mauris et nisi
+						</a>
+					  </li>
+					  <li>
+						<a href="#">
+						  <i class="fa fa-user text-danger"></i> Praesent eu lacus in libero dictum fermentum.
+						</a>
+					  </li>
+					  <li>
+						<a href="#">
+						  <i class="fa fa-user text-primary"></i> Nunc fringilla lorem 
+						</a>
+					  </li>
+					  <li>
+						<a href="#">
+						  <i class="fa fa-user text-success"></i> Nullam euismod dolor ut quam interdum, at scelerisque ipsum imperdiet.
+						</a>
+					  </li>
+					</ul>
+				  </li>
+				  <li class="footer">
+					  <a href="#">View all</a>
+				  </li>
+				</ul>
+			  </li>	
+
+			    User Account 
+			  <li class="dropdown user user-menu">
+				<a href="#" class="waves-effect waves-light dropdown-toggle btn-primary-light" data-bs-toggle="dropdown" title="User">
+					<i data-feather="user"></i>
+				</a>
+				<ul class="dropdown-menu animated flipInX">
+				  <li class="user-body">
+					 <a class="dropdown-item" href="#"><i class="ti-user text-muted me-2"></i> Profile</a>
+					 <a class="dropdown-item" href="#"><i class="ti-wallet text-muted me-2"></i> My Wallet</a>
+					 <a class="dropdown-item" href="#"><i class="ti-settings text-muted me-2"></i> Settings</a>
+					 <div class="dropdown-divider"></div>
+					 <a class="dropdown-item" href="#"><i class="ti-lock text-muted me-2"></i> Logout</a>
+				  </li>
+				</ul>
+			  </li>	
+
+			    Control Sidebar Toggle Button 
+			  <li>
+				  <a href="#" data-toggle="control-sidebar" title="Setting" class="waves-effect waves-light btn-primary-light">
+					<i data-feather="settings"></i>
+ 
+				  </a>
+			  </li>
+
+	-->
+
+
+
+					
+	
+
+
+
+		
+
+
+			</ul>
+
+
+		  </div>
+		</nav>
+	  </div>
+  </header>
+  
+  <!-- Left side column. contains the logo and sidebar -->
+  <nav class="main-nav" role="navigation">
+
+	  <!-- Mobile menu toggle button (hamburger/x icon) -->
+	  <input id="main-menu-state" type="checkbox" />
+	  <label class="main-menu-btn" for="main-menu-state">
+		<span class="main-menu-btn-icon"></span> Toggle main menu visibility
+	  </label>
+
+   <!-- 
+ 
+ -->
+
+
+
+
+	  <!-- Sample menu definition -->
+	  <ul id="main-menu" class="sm sm-blue">
+		
+		<!--
+		<li><a href="#"><i data-feather="monitor"></i>Dashboard</a>
+		  <ul>
+			<li><a href="#"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Options 1 to 5</a>
+			  <ul>
+				<li><a href="index.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Dash 1</a></li>
+				<li><a href="index2.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Dash 2</a></li>
+				<li><a href="index3.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Dash 3</a></li>
+				<li><a href="index4.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Dash 4</a></li>
+				<li><a href="index5.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Dash 5</a></li>	
+			  </ul>			  
+			</li>
+			<li><a href="#"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Options 6 to 10</a>
+			  <ul>
+				<li><a href="index6.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Dash 6</a></li>
+				<li><a href="index7.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Dash 7</a></li>
+				<li><a href="index8.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Dash 8</a></li>
+				<li><a href="index9.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Dash 9</a></li>
+				<li><a href="index10.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Dash 10</a></li>	
+			  </ul>			  
+			</li>
+			<li><a href="#"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Options 11 to 15</a>
+			  <ul>
+				<li><a href="index11.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Dash 11</a></li>
+				<li><a href="index12.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Dash 12</a></li>
+				<li><a href="index13.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Dash 13</a></li>
+				<li><a href="index14.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Dash 14</a></li>
+				<li><a href="index15.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Dash 15</a></li>	
+			  </ul>			  
+			</li>
+			<li><a href="#"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Options 16 to 20</a>
+			  <ul>
+				<li><a href="index16.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Dash 16</a></li>
+				<li><a href="index17.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Dash 17</a></li>
+				<li><a href="index18.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Dash 18</a></li>
+				<li><a href="index19.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Dash 19</a></li>
+				<li><a href="index20.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Dash 20</a></li>	
+			  </ul>			  
+			</li>
+			<li><a href="#"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Options 21 to 25</a>
+			  <ul>
+				<li><a href="index21.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Dash 21</a></li>
+				<li><a href="index22.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Dash 22</a></li>
+				<li><a href="index23.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Dash 23</a></li>
+				<li><a href="index24.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Dash 24</a></li>
+				<li><a href="index25.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Dash 25</a></li>	
+			  </ul>			  
+			</li>
+			<li><a href="#"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Options 26 to 30</a>
+			  <ul>
+				<li><a href="index26.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Dash 26</a></li>
+				<li><a href="index27.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Dash 27</a></li>
+				<li><a href="index28.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Dash 28</a></li>
+				<li><a href="index29.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Dash 29</a></li>
+				<li><a href="index30.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Dash 30</a></li>	
+			  </ul>			  
+			</li>
+		  </ul>		  
+		</li>
+		<li><a href="#"><i data-feather="bar-chart-2"></i>Reports</a>
+			<ul> 
+				<li><a href="reports_transactions.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Transactions</a></li>
+				<li><a href="reports_top_gainers_losers.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Top Gainers/Losers</a></li>
+				<li><a href="reports_market_capitalizations.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Market Capitalizations</a></li>
+				<li><a href="reports_crypto_stats.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Crypto Stats</a></li>
+			</ul>
+		</li>
+		<li><a href="#"><i data-feather="pie-chart"></i>ICO</a>
+			<ul> 
+				<li><a href="ico_distribution_countdown.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Countdown</a></li>
+				<li><a href="ico_roadmap_timeline.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Roadmap/Timeline</a></li>
+				<li><a href="ico_progress.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Progress Bar</a></li>
+				<li><a href="ico_details.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Details</a></li>
+				<li><a href="ico_listing.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>ICO Listing</a></li>
+				<li><a href="ico_filter.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>ICO Listing - Filters</a></li>	
+			</ul>
+		</li>
+		<li><a href="currency_exchange.html"><i data-feather="refresh-ccw"></i>Currency Exchange</a></li>
+		<li><a href="#"><i data-feather="users"></i>Members</a>
+			<ul> 
+				<li><a href="members.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Members Grid</a></li>
+				<li><a href="members_list.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Members List</a></li>
+				<li><a href="member_profile.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Member Profile</a></li>		
+			</ul>
+		</li>
+		<li><a href="#"><i data-feather="sliders"></i>Tickers</a>
+			<ul> 
+				<li><a href="tickers.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Ticker</a></li>
+				<li><a href="tickers_live_pricing.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Live Crypto Prices</a></li>		
+			</ul>
+		</li>
+		<li><a href="#"><i data-feather="dollar-sign"></i>Transactions</a>
+			<ul> 
+				<li><a href="transactions_tables.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Transactions Tables</a></li>
+				<li><a href="transaction_search.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Transactions Search</a></li>	
+				<li><a href="transaction_details.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Single Transaction</a></li>
+				<li><a href="transactions_counter.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Transactions Counter</a></li>		
+			</ul>
+		</li>
+		<li><a href="#"><i data-feather="pie-chart"></i>Charts</a>
+			<ul> 
+				<li><a href="charts_chartjs.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>ChartJS</a></li>
+				<li><a href="charts_flot.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Flot</a></li>
+				<li><a href="charts_inline.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Inline charts</a></li>
+				<li><a href="charts_morris.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Morris</a></li>
+				<li><a href="charts_peity.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Peity</a></li>
+				<li><a href="charts_chartist.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Chartist</a></li>
+				<li><a href="charts_rickshaw.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Rickshaw Charts</a></li>
+				<li><a href="charts_nvd3.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>NVD3 Charts</a></li>
+				<li><a href="charts_echart.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>eChart</a></li>
+				<li><a href="charts_amcharts.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>amCharts Charts</a></li>
+				<li><a href="charts_amstock_charts.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>amCharts Stock Charts</a></li>
+				<li><a href="charts_ammaps.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>amCharts Maps</a></li>	
+			</ul>
+		</li>
+		<li><a href="#"><i data-feather="grid"></i>Apps</a>
+			<ul> 
+				<li><a href="extra_calendar.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Calendar</a></li>
+				<li><a href="contact_app.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Contact List</a></li>
+				<li><a href="contact_app_chat.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Chat</a></li>
+				<li><a href="extra_taskboard.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Todo</a></li>
+				<li><a href="mailbox.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Mailbox</a></li>
+				<li><a href="app_project_table.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Project</a></li>	
+			</ul>
+		</li>
+		<li><a href="#"><i data-feather="grid"></i>Features</a>
+			<ul>
+				<li><a href="#"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Components</a>
+				  <ul>
+					<li><a href="component_bootstrap_switch.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Bootstrap Switch</a></li>
+					<li><a href="component_date_paginator.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Date Paginator</a></li>
+					<li><a href="component_media_advanced.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Advanced Medias</a></li>
+					<li><a href="component_rangeslider.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Range Slider</a></li>
+					<li><a href="component_rating.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Ratings</a></li>
+					<li><a href="component_animations.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Animations</a></li>
+					<li><a href="extension_fullscreen.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Fullscreen</a></li>
+					<li><a href="extension_pace.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Pace</a></li>
+					<li><a href="component_nestable.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Nestable</a></li>
+					<li><a href="component_portlet_draggable.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Draggable Portlets</a></li>		
+				  </ul>			  
+				</li>
+				<li><a href="#"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Card</a>
+				  <ul>
+					<li><a href="box_cards.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>User Card</a></li>
+					<li><a href="box_advanced.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Advanced Card</a></li>
+					<li><a href="box_basic.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Basic Card</a></li>
+					<li><a href="box_color.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Card Color</a></li>
+					<li><a href="box_group.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Card Group</a></li>		
+				  </ul>			  
+				</li>				
+				<li><a href="#"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Utility Elements</a>
+				  <ul>
+					<li><a href="ui_badges.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Badges</a></li>
+					<li><a href="ui_border_utilities.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Border</a></li>
+					<li><a href="ui_buttons.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Buttons</a></li>	
+					<li><a href="ui_color_utilities.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Color</a></li>
+					<li><a href="ui_dropdown.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Dropdown</a></li>
+					<li><a href="ui_dropdown_grid.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Dropdown Grid</a></li>
+					<li><a href="ui_progress_bars.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Progress Bars</a></li>			
+				  </ul>			  
+				</li>			
+				<li><a href="#"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Icons</a>
+				  <ul>
+					<li><a href="icons_fontawesome.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Font Awesome</a></li>
+					<li><a href="icons_glyphicons.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Glyphicons</a></li>
+					<li><a href="icons_material.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Material Icons</a></li>	
+					<li><a href="icons_themify.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Themify Icons</a></li>
+					<li><a href="icons_simpleline.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Simple Line Icons</a></li>
+					<li><a href="icons_cryptocoins.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Cryptocoins Icons</a></li>
+					<li><a href="icons_flag.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Flag Icons</a></li>
+					<li><a href="icons_weather.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Weather Icons</a></li>			
+				  </ul>			  
+				</li>			
+				<li><a href="#"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Extra Elements</a>
+				  <ul>
+					<li><a href="ui_ribbons.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Ribbons</a></li>
+					<li><a href="ui_sliders.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Sliders</a></li>
+					<li><a href="ui_typography.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Typography</a></li>
+					<li><a href="ui_tab.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Tabs</a></li>
+					<li><a href="ui_timeline.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Timeline</a></li>
+					<li><a href="ui_timeline_horizontal.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Horizontal Timeline</a></li>			
+				  </ul>			  
+				</li>
+				<li><a href="ui_grid.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Grid System</a></li>
+			</ul>
+		</li> 
+		<li><a href="#"><i data-feather="inbox"></i>Forms & Tables</a>
+			<ul>
+				<li><a href="#"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Forms</a>
+				  <ul>
+					<li><a href="forms_advanced.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Form Elements</a></li>
+					<li><a href="forms_general.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Form Layout</a></li>
+					<li><a href="forms_wizard.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Form Wizard</a></li>	
+					<li><a href="forms_validation.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Form Validation</a></li>
+					<li><a href="forms_mask.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Formatter</a></li>
+					<li><a href="forms_xeditable.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Xeditable Editor</a></li>
+					<li><a href="forms_dropzone.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Dropzone</a></li>
+					<li><a href="forms_code_editor.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Code Editor</a></li>
+					<li><a href="forms_editors.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Editor</a></li>
+					<li><a href="forms_editor_markdown.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Markdown</a></li>	
+				  </ul>			  
+				</li>
+				<li><a href="#"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Tables</a>
+				  <ul>
+					<li><a href="tables_simple.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Simple tables</a></li>
+					<li><a href="tables_data.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Data tables</a></li>
+					<li><a href="tables_editable.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Editable Tables</a></li>
+					<li><a href="tables_color.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Table Color</a></li>		
+				  </ul>			  
+				</li>				
+			</ul>
+		</li>  
+		<li><a href="#"><i data-feather="edit"></i>Widgets</a>
+			<ul>
+				<li><a href="#"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Core Widgets</a>
+				  <ul>
+					<li><a href="widgets_blog.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Blog</a></li>
+					<li><a href="widgets_chart.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Chart</a></li>
+					<li><a href="widgets_list.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>List</a></li>
+					<li><a href="widgets_social.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Social</a></li>
+					<li><a href="widgets_statistic.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Statistic</a></li>
+					<li><a href="widgets_weather.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Weather</a></li>
+					<li><a href="widgets.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Widgets</a></li>
+					<li><a href="email_index.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Emails</a></li>
+				  </ul>			  
+				</li>
+				<li><a href="#"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Maps</a>
+				  <ul>
+					<li><a href="map_google.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Google Map</a></li>
+					<li><a href="map_vector.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Vector Map</a></li>		
+				  </ul>			  
+				</li>
+				<li><a href="#"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Modals</a>
+				  <ul>
+					<li><a href="component_modals.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Modals</a></li>
+					<li><a href="component_sweatalert.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Sweet Alert</a></li>
+					<li><a href="component_notification.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Toastr</a></li>		
+				  </ul>			  
+				</li>				
+			</ul>
+		</li>
+		<li><a href="#"><i data-feather="cast"></i>Pages</a>
+			<ul>
+				<li><a href="#"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Elements Pages</a>
+				  <ul>
+					<li><a href="sample_faq.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>FAQs</a></li>
+					<li><a href="sample_blank.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Blank</a></li>
+					<li><a href="sample_coming_soon.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Coming Soon</a></li>
+					<li><a href="sample_custom_scroll.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Custom Scrolls</a></li>
+					<li><a href="sample_gallery.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Gallery</a></li>
+					<li><a href="sample_lightbox.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Lightbox Popup</a></li>
+					<li><a href="sample_pricing.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Pricing</a></li>
+				  </ul>			  
+				</li>
+				<li><a href="#"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Invoice</a>
+				  <ul>
+					<li><a href="invoice.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Invoice</a></li>
+					<li><a href="invoicelist.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Invoice List</a></li>
+				  </ul>			  
+				</li>
+				<li><a href="#"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>User Pages</a>
+				  <ul>
+					<li><a href="extra_profile.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>User Profile</a></li>
+					<li><a href="contact_userlist_grid.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Userlist Grid</a></li>
+					<li><a href="contact_userlist.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Userlist</a></li>			
+				  </ul>			  
+				</li>				
+			</ul>
+		</li>
+		<li><a href="#"><i data-feather="lock"></i>Login &amp; Error</a>
+			<ul>
+				<li><a href="#"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Authentication</a>
+				  <ul>
+					<li><a href="auth_login.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Login</a></li>
+					<li><a href="auth_register.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Register</a></li>
+					<li><a href="auth_lockscreen.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Lockscreen</a></li>
+					<li><a href="auth_user_pass.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Recover password</a></li>
+				  </ul>			  
+				</li>
+				<li><a href="#"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Miscellaneous</a>
+				  <ul>
+					<li><a href="error_404.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Error 404</a></li>
+					<li><a href="error_500.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Error 500</a></li>
+					<li><a href="error_maintenance.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Maintenance</a></li>
+				  </ul>			  
+				</li>				
+			</ul>
+		</li>	
+--> 
+		 <li><a href="index.html"><i data-feather="refresh-ccw"></i>Swap</a></li>
+		   <li><a href="https://github.com/AlgoNetwork/UniInch/issues" target="_blank" > Contact</a></li>	
+	  </ul>
+
+ 
+
+	 
+	</nav>
+    
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+	  <div class="container-full">
+		<!-- Content Header (Page header) -->	  
+		<div class="content-header">
+			<div class="d-flex align-items-center">
+				<div class="me-auto">
+					<h4 class="page-title">UniInch</h4>
+					<div class="d-inline-block align-items-center">
+						<nav>
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item"><a href="#"><i class="mdi mdi-home-outline"></i></a></li>
+								<!--<li class="breadcrumb-item active" aria-current="page">Currency Exchange</li>-->
+							</ol>
+						</nav>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+
+		<!-- Main content -->
+		<section class="content">			
+		  	<div class="row">
+
+<!-- ticks   /main-horizontal-web/assets/icons/cryptocoins-master 
+		  				<div class="row">
+			  	<div class="col-12">					
+	 
+				  <div class="box box-inverse box-dark">
+					  <div class="box-body tickers-block">
+						  <ul id="webticker-1">
+						  
+ 
+							<li><i class="cc BTC"></i> BTC <span id="btcPrice" class="text-warning"> </span></li> 
+							<li><i class="cc ETH"></i> ETH <span id="ethPrice" class="text-warning"> </span></li> 
+<li><i class="cc BNB"></i> ETH <span id="bnbPrice" class="text-warning"> </span></li> 
+<li><i class="cc SOL"></i> ETH <span id="solPrice" class="text-warning"> </span></li> 
+<li><i class="cc ADA"></i> ETH <span id="adaPrice" class="text-warning"> </span></li> 
+<li><i class="cc DOT"></i> ETH <span id="dotPrice" class="text-warning"> </span></li> 
+<li><i class="cc DOGE"></i> ETH <span id="dogePrice" class="text-warning"> </span></li> 
+<li><i class="cc AVAX"></i> ETH <span id="avaxPrice" class="text-warning"> </span></li> 
+  			 
+							 
+						  </ul>
+					  </div>
+				  </div></div></div>
+
+-->
+
+
+
+
+
+
+
+
+				<div class="col-12">
+					<div class="box">
+						<div class="box-body">
+							<h1 class="page-header text-center no-border fw-600 fs-60 mt-25"><span class="text-primary">Swap</span> with <span class="text-danger">Best</span> Price<br> </h1>
+  <h3 class="subtitle text-center">Find best exchange rates between DEFI exchange<br> Support:Binance,Avalanche,Polygon and Heco </h3> 
+							<div class="row">
+								<div class="col-12">
+									<div class="exchange-calculator text-center mt-35">
+<!--oninput="ISendInputChange()"-->
+
+ <input id="ISendAmount" type="text" class="form-control" name="coins-exchange" placeholder="" value="1" >                
+										<select id = "SelectISend" class="LeftOption" name="state" onchange="ISendChange( )">
+											
+										</select>
+
+<!--<div class="equal"> <a href="#" id="ChangeSwapButton" class="btn  mx-auto"> = </a> </div>-->
+										  <a href="#" id="ChangeSwapButton" class="btn  mx-auto"> = </a>  
+										<input id="IReciveAmount" type="text" class="form-control" name="money-exchange" placeholder="" value="">    
+
+
+										<select  id = "SelectIWant" class="RightOption" name="state" onchange="IWantChange( )">
+						 
+										</select>
+
+<br>
+<div class="container">
+  <div  class="row align-items-center">
+    <div class="col-4">
+        <div id="SendBalance" class="col-md-4"></div>
+    </div>
+    <div class="col-4  ">
+      <div id="router" class="col-md-4 offset-md-4">Router</div>
+    </div>
+    <div class="col-2  ">
+      <div id="UserChooseCoinAddress"  >
+
+      </div>
+    </div>
+    <div class="col-2  ">
+      <div id="RecieveBalance" class="col-md-4 offset-md-4"></div>
+    </div>
+
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+    <div class="col  ">
+      <div id="Tips" class="col-md-4 offset-md-4"> </div>
+    </div>
+     </div>
+  </div>
+</div>
+
+
+
+								   </div>
+
+
+								   <div class="text-center mt-15 mb-25">
+
+								   <img id="loader1"    src="loading.gif"></img>
+                                   
+                                   <button id="approveThisButton" style="display: none;" class="btn btn-primary">Approve</button>
+	<!--	<button  id="SwapButton" class="waves-effect waves-light btn mb-5 bg-gradient-primary btn-primary mx-auto">Swap</button>-->
+  <button  id="SwapButton" class="btn btn-primary mx-auto">Swap</button> 
+
+								   </div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+<!-- table -->
+
+
+	<div class="row">
+			  <div class="col-12">
+				  <div class="box">
+					<div class="box-header">
+					<!-- <h4 class="box-title"><strong> bb</strong> colors</h4>-->
+					</div>
+				  <div class="box-body">
+					<div class="row">
+					  <div class="col-12">
+	
+						 
+						<table class="table table-lg table-separated">
+						  <thead>
+							<tr>
+							  <th>Exchange</th>
+							  <th>Pair</th>
+							  <th>Recieve Amount</th>
+ 
+							</tr>
+						  </thead>
+						  <tbody  id="RouterTable">
+								
+						  </tbody>
+						</table>
+					  </div>
+					  
+					</div>
+				  </div>
+				</div>
+			</div>
+		  </div>
+
+<!-- table -->
+
+
+
+<!-- big card -->
+<!-- 
+			<div class="row">
+				<div class="col-lg-3 col-md-6">
+					<div class="box pull-up">
+					  <div class="box-body">
+						  <div class="media align-items-center p-0">
+							<div class="text-center">
+							  <a href="#"><i class="cc BTC me-5" title="BTC"></i></a>
+							</div>
+							<div>
+							  <h3 class="no-margin text-bold">Bitcoin BTC</h3>
+							</div>
+						  </div>
+						  <div class="flexbox align-items-center mt-5">
+							<div>
+							  <p class="no-margin fw-600"><span class="text-primary">0.00000434 </span>BTC<span  class="text-info">$0.04</span></p>
+							</div>
+							<div class="text-end">
+							  <p class="no-margin fw-600"><span class="text-success">+1.35%</span></p>
+							</div>
+						  </div>
+					</div>
+					<div class="box-footer p-0 no-border">
+						<div class="chart"><canvas id="chartjs1" class="h-80"></canvas></div>
+					</div>
+				 </div>
+			  </div>
+				<div class="col-lg-3 col-md-6">
+					<div class="box pull-up">
+					  <div class="box-body">
+						  <div class="media align-items-center p-0">
+							<div class="text-center">
+							  <a href="#"><i class="cc LTC me-5" title="LTC"></i></a>
+							</div>
+							<div>
+							  <h3 class="no-margin text-bold">Litecoin LTC</h3>
+							</div>
+						  </div>
+						  <div class="flexbox align-items-center mt-5">
+							<div>
+							  <p class="no-margin fw-600"><span class="text-primary">0.00000434 </span>LTC<span  class="text-info">$0.04</span></p>
+							</div>
+							<div class="text-end">
+							  <p class="no-margin fw-600"><span class="text-danger">-1.35%</span></p>
+							</div>
+						  </div>
+					</div>
+					<div class="box-footer p-0 no-border">
+						<div class="chart"><canvas id="chartjs2" class="h-80"></canvas></div>
+					</div>
+				 </div>
+			  </div>
+				<div class="col-lg-3 col-md-6">
+					<div class="box pull-up">
+					  <div class="box-body">
+						  <div class="media align-items-center p-0">
+							<div class="text-center">
+							  <a href="#"><i class="cc NEO me-5" title="NEO"></i></a>
+							</div>
+							<div>
+							  <h3 class="no-margin text-bold">Neo NEO</h3>
+							</div>
+						  </div>
+						  <div class="flexbox align-items-center mt-5">
+							<div>
+							  <p class="no-margin fw-600"><span class="text-primary">0.00000434 </span>NEO<span class="text-info">$0.04</span></p>
+							</div>
+							<div class="text-end">
+							  <p class="no-margin fw-600"><span class="text-danger">-1.35%</span></p>
+							</div>
+						  </div>
+					</div>
+					<div class="box-footer p-0 no-border">
+						<div class="chart"><canvas id="chartjs3" class="h-80"></canvas></div>
+					</div>
+				 </div>
+			  </div>
+				<div class="col-lg-3 col-md-6">
+					<div class="box pull-up">
+					  <div class="box-body">
+						  <div class="media align-items-center p-0">
+							<div class="text-center">
+							  <a href="#"><i class="cc DASH me-5" title="DASH"></i></a>
+							</div>
+							<div>
+							  <h3 class="no-margin text-bold">Dash DASH</h3>
+							</div>
+						  </div>
+						  <div class="flexbox align-items-center mt-5">
+							<div>
+							  <p class="no-margin fw-600"><span class="text-primary">0.00000434 </span>DASH<span class="text-info">$0.04</span></p>
+							</div>
+							<div class="text-end">
+							  <p class="no-margin fw-600"><span class="text-success">+1.35%</span></p>
+							</div>
+						  </div>
+					</div>
+					<div class="box-footer p-0 no-border">
+						<div class="chart"><canvas id="chartjs4" class="h-80"></canvas></div>
+					</div>
+				 </div>
+			  </div>
+		   </div>
+
+big card -->
+
+
+<!-- small card -->
+
+			<div id="SmallCardArea" class="row mt-30">
+
+			<!--
+			  <div class="col-12 col-md-6 col-lg-4">
+				<div class="box box-body pull-up">
+				  <div class="media align-items-center p-0">
+					<div class="text-center">
+					  <a href="#"><i class="cc BTC me-5" title="BTC"></i></a>
+					</div>
+					<div>
+					  <h3 class="no-margin">Bitcoin BTC</h3>
+					</div>
+				  </div>
+				  <div class="flexbox align-items-center mt-25">
+					<div>
+					  <p class="no-margin">2.340000434 <span class="text-gray">BTC</span> <span id="btcCardPrice" class="text-info">-</span></p>
+					</div>
+					<div class="text-end">
+					  <p class="no-margin"><span class="text-success">+5.35%</span></p>
+					</div>
+				  </div>
+				</div>			
+			  </div>
+			  <div class="col-12 col-md-6 col-lg-4">
+				<div class="box box-body pull-up">
+				  <div class="media align-items-center p-0">
+					<div class="text-center">
+					  <a href="#"><i class="cc LTC me-5" title="LTC"></i></a>
+					</div>
+					<div>
+					  <h3 class="no-margin">Litecoin LTC</h3>
+					</div>
+				  </div>
+				  <div class="flexbox align-items-center mt-25">
+					<div>
+					  <p class="no-margin">1.34000434 <span class="text-gray">LTC</span> <span id="ltcCardPrice" class="text-info">-</span></p>
+					</div>
+					<div class="text-end">
+					  <p class="no-margin"><span class="text-danger">-2.35%</span></p>
+					</div>
+				  </div>
+				</div>			
+			  </div>
+			  <div class="col-12 col-md-6 col-lg-4">
+				<div class="box box-body pull-up">
+				  <div class="media align-items-center p-0">
+					<div class="text-center">
+					  <a href="#"><i class="cc ADA me-5" title="NEO"></i></a>
+					</div>
+					<div>
+					  <h3 class="no-margin">ADA</h3>
+					</div>
+				  </div>
+				  <div class="flexbox align-items-center mt-25">
+					<div>
+					  <p class="no-margin">0.30000434 <span class="text-gray">NEO</span> <span class="text-info">$5.04</span></p>
+					</div>
+					<div class="text-end">
+					  <p class="no-margin"><span class="text-success">+4.35%</span></p>
+					</div>
+				  </div>
+				</div>			
+			  </div>
+			  <div class="col-12 col-md-6 col-lg-4">
+				<div class="box box-body pull-up">
+				  <div class="media align-items-center p-0">
+					<div class="text-center">
+					  <a href="#"><i class="cc DASH me-5" title="DASH"></i></a>
+					</div>
+					<div>
+					  <h3 class="no-margin">Dash DASH</h3>
+					</div>
+				  </div>
+				  <div class="flexbox align-items-center mt-25">
+					<div>
+					  <p class="no-margin">0.34000434 <span class="text-gray">DASH</span> <span class="text-info">$0.54</span></p>
+					</div>
+					<div class="text-end">
+					  <p class="no-margin"><span class="text-danger">-5.35%</span></p>
+					</div>
+				  </div>
+				</div>			
+			  </div>
+			  <div class="col-12 col-md-6 col-lg-4">
+				<div class="box box-body pull-up">
+				  <div class="media align-items-center p-0">
+					<div class="text-center">
+					  <a href="#"><i class="cc ETH me-5" title="ETH"></i></a>
+					</div>
+					<div>
+					  <h3 class="no-margin">Ethereum ETH</h3>
+					</div>
+				  </div>
+				  <div class="flexbox align-items-center mt-25">
+					<div>
+					  <p class="no-margin">0.12300434 <span class="text-gray">ETH</span> <span class="text-info">$0.12</span></p>
+					</div>
+					<div class="text-end">
+					  <p class="no-margin"><span class="text-success">+0.35%</span></p>
+					</div>
+				  </div>
+				</div>			
+			  </div>
+			  <div class="col-12 col-md-6 col-lg-4">
+				<div class="box box-body pull-up">
+				  <div class="media align-items-center p-0">
+					<div class="text-center">
+					  <a href="#"><i class="cc XRP me-5" title="XRP"></i></a>
+					</div>
+					<div>
+					  <h3 class="no-margin">Ripple XRP</h3>
+					</div>
+				  </div>
+				  <div class="flexbox align-items-center mt-25">
+					<div>
+					  <p class="no-margin">0.00000434 <span class="text-gray">XRP</span> <span class="text-info">$0.04</span></p>
+					</div>
+					<div class="text-end">
+					  <p class="no-margin"><span class="text-danger">-1.35%</span></p>
+					</div>
+				  </div>
+				</div>			
+			  </div> 
+
+			  -->
+
+			</div>
+		</section>
+		<!-- /.content -->
+	  
+	  </div>
+  </div>
+  <!-- /.content-wrapper -->
+ 
+   <footer class="main-footer">
+    <div class="pull-right d-none d-sm-inline-block">
+        <ul class="nav nav-primary nav-dotted nav-dot-separated justify-content-center justify-content-md-end">
+		  <li class="nav-item">
+			<!--<a class="nav-link" href="javascript:void(0)">FAQ</a>-->
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="#"></a>
+		  </li>
+		</ul>
+    </div>
+	  &copy; 2021 <a href="https://github.com/AlgoNetwork/UniInch/">Corgi</a>. All Rights Reserved.
+  </footer>
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar">
+	  
+	<div class="rpanel-title"><span class="pull-right btn btn-circle btn-danger"><i class="ion ion-close text-white" data-toggle="control-sidebar"></i></span> </div>  <!-- Create the tabs -->
+    <ul class="nav nav-tabs control-sidebar-tabs">
+      <li class="nav-item"><a href="#control-sidebar-home-tab" data-bs-toggle="tab" class="active"><i class="mdi mdi-message-text"></i></a></li>
+      <li class="nav-item"><a href="#control-sidebar-settings-tab" data-bs-toggle="tab"><i class="mdi mdi-playlist-check"></i></a></li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <!-- Home tab content -->
+      <div class="tab-pane active" id="control-sidebar-home-tab">
+          <div class="flexbox">
+			<a href="javascript:void(0)" class="text-grey">
+				<i class="ti-more"></i>
+			</a>	
+			<p>Users</p>
+			<a href="javascript:void(0)" class="text-end text-grey"><i class="ti-plus"></i></a>
+		  </div>
+		  <div class="lookup lookup-sm lookup-right d-none d-lg-block">
+			<input type="text" name="s" placeholder="Search" class="w-p100">
+		  </div>
+          <div class="media-list media-list-hover mt-20">
+			<div class="media py-10 px-0">
+			  <a class="avatar avatar-lg status-success" href="#">
+				<img src="images/avatar/1.jpg" alt="...">
+			  </a>
+			  <div class="media-body">
+				<p class="fs-16">
+				  <a class="hover-primary" href="#"><strong>Tyler</strong></a>
+				</p>
+				<p>Praesent tristique diam...</p>
+				  <span>Just now</span>
+			  </div>
+			</div>
+
+			<div class="media py-10 px-0">
+			  <a class="avatar avatar-lg status-danger" href="#">
+				<img src="images/avatar/2.jpg" alt="...">
+			  </a>
+			  <div class="media-body">
+				<p class="fs-16">
+				  <a class="hover-primary" href="#"><strong>Luke</strong></a>
+				</p>
+				<p>Cras tempor diam ...</p>
+				  <span>33 min ago</span>
+			  </div>
+			</div>
+
+			<div class="media py-10 px-0">
+			  <a class="avatar avatar-lg status-warning" href="#">
+				<img src="images/avatar/3.jpg" alt="...">
+			  </a>
+			  <div class="media-body">
+				<p class="fs-16">
+				  <a class="hover-primary" href="#"><strong>Evan</strong></a>
+				</p>
+				<p>In posuere tortor vel...</p>
+				  <span>42 min ago</span>
+			  </div>
+			</div>
+
+			<div class="media py-10 px-0">
+			  <a class="avatar avatar-lg status-primary" href="#">
+				<img src="images/avatar/4.jpg" alt="...">
+			  </a>
+			  <div class="media-body">
+				<p class="fs-16">
+				  <a class="hover-primary" href="#"><strong>Evan</strong></a>
+				</p>
+				<p>In posuere tortor vel...</p>
+				  <span>42 min ago</span>
+			  </div>
+			</div>			
+			
+			<div class="media py-10 px-0">
+			  <a class="avatar avatar-lg status-success" href="#">
+				<img src="images/avatar/1.jpg" alt="...">
+			  </a>
+			  <div class="media-body">
+				<p class="fs-16">
+				  <a class="hover-primary" href="#"><strong>Tyler</strong></a>
+				</p>
+				<p>Praesent tristique diam...</p>
+				  <span>Just now</span>
+			  </div>
+			</div>
+
+			<div class="media py-10 px-0">
+			  <a class="avatar avatar-lg status-danger" href="#">
+				<img src="images/avatar/2.jpg" alt="...">
+			  </a>
+			  <div class="media-body">
+				<p class="fs-16">
+				  <a class="hover-primary" href="#"><strong>Luke</strong></a>
+				</p>
+				<p>Cras tempor diam ...</p>
+				  <span>33 min ago</span>
+			  </div>
+			</div>
+
+			<div class="media py-10 px-0">
+			  <a class="avatar avatar-lg status-warning" href="#">
+				<img src="images/avatar/3.jpg" alt="...">
+			  </a>
+			  <div class="media-body">
+				<p class="fs-16">
+				  <a class="hover-primary" href="#"><strong>Evan</strong></a>
+				</p>
+				<p>In posuere tortor vel...</p>
+				  <span>42 min ago</span>
+			  </div>
+			</div>
+
+			<div class="media py-10 px-0">
+			  <a class="avatar avatar-lg status-primary" href="#">
+				<img src="images/avatar/4.jpg" alt="...">
+			  </a>
+			  <div class="media-body">
+				<p class="fs-16">
+				  <a class="hover-primary" href="#"><strong>Evan</strong></a>
+				</p>
+				<p>In posuere tortor vel...</p>
+				  <span>42 min ago</span>
+			  </div>
+			</div>
+			  
+		  </div>
+
+      </div>
+      <!-- /.tab-pane -->
+      <!-- Settings tab content -->
+      <div class="tab-pane" id="control-sidebar-settings-tab">
+          <div class="flexbox">
+			<a href="javascript:void(0)" class="text-grey">
+				<i class="ti-more"></i>
+			</a>	
+			<p>Todo List</p>
+			<a href="javascript:void(0)" class="text-end text-grey"><i class="ti-plus"></i></a>
+		  </div>
+        <ul class="todo-list mt-20">
+			<li class="py-15 px-5 by-1">
+			  <!-- checkbox -->
+			  <input type="checkbox" id="basic_checkbox_1" class="filled-in">
+			  <label for="basic_checkbox_1" class="mb-0 h-15"></label>
+			  <!-- todo text -->
+			  <span class="text-line">Nulla vitae purus</span>
+			  <!-- Emphasis label -->
+			  <small class="badge bg-danger"><i class="fa fa-clock-o"></i> 2 mins</small>
+			  <!-- General tools such as edit or delete-->
+			  <div class="tools">
+				<i class="fa fa-edit"></i>
+				<i class="fa fa-trash-o"></i>
+			  </div>
+			</li>
+			<li class="py-15 px-5">
+			  <!-- checkbox -->
+			  <input type="checkbox" id="basic_checkbox_2" class="filled-in">
+			  <label for="basic_checkbox_2" class="mb-0 h-15"></label>
+			  <span class="text-line">Phasellus interdum</span>
+			  <small class="badge bg-info"><i class="fa fa-clock-o"></i> 4 hours</small>
+			  <div class="tools">
+				<i class="fa fa-edit"></i>
+				<i class="fa fa-trash-o"></i>
+			  </div>
+			</li>
+			<li class="py-15 px-5 by-1">
+			  <!-- checkbox -->
+			  <input type="checkbox" id="basic_checkbox_3" class="filled-in">
+			  <label for="basic_checkbox_3" class="mb-0 h-15"></label>
+			  <span class="text-line">Quisque sodales</span>
+			  <small class="badge bg-warning"><i class="fa fa-clock-o"></i> 1 day</small>
+			  <div class="tools">
+				<i class="fa fa-edit"></i>
+				<i class="fa fa-trash-o"></i>
+			  </div>
+			</li>
+			<li class="py-15 px-5">
+			  <!-- checkbox -->
+			  <input type="checkbox" id="basic_checkbox_4" class="filled-in">
+			  <label for="basic_checkbox_4" class="mb-0 h-15"></label>
+			  <span class="text-line">Proin nec mi porta</span>
+			  <small class="badge bg-success"><i class="fa fa-clock-o"></i> 3 days</small>
+			  <div class="tools">
+				<i class="fa fa-edit"></i>
+				<i class="fa fa-trash-o"></i>
+			  </div>
+			</li>
+			<li class="py-15 px-5 by-1">
+			  <!-- checkbox -->
+			  <input type="checkbox" id="basic_checkbox_5" class="filled-in">
+			  <label for="basic_checkbox_5" class="mb-0 h-15"></label>
+			  <span class="text-line">Maecenas scelerisque</span>
+			  <small class="badge bg-primary"><i class="fa fa-clock-o"></i> 1 week</small>
+			  <div class="tools">
+				<i class="fa fa-edit"></i>
+				<i class="fa fa-trash-o"></i>
+			  </div>
+			</li>
+			<li class="py-15 px-5">
+			  <!-- checkbox -->
+			  <input type="checkbox" id="basic_checkbox_6" class="filled-in">
+			  <label for="basic_checkbox_6" class="mb-0 h-15"></label>
+			  <span class="text-line">Vivamus nec orci</span>
+			  <small class="badge bg-info"><i class="fa fa-clock-o"></i> 1 month</small>
+			  <div class="tools">
+				<i class="fa fa-edit"></i>
+				<i class="fa fa-trash-o"></i>
+			  </div>
+			</li>
+			<li class="py-15 px-5 by-1">
+			  <!-- checkbox -->
+			  <input type="checkbox" id="basic_checkbox_7" class="filled-in">
+			  <label for="basic_checkbox_7" class="mb-0 h-15"></label>
+			  <!-- todo text -->
+			  <span class="text-line">Nulla vitae purus</span>
+			  <!-- Emphasis label -->
+			  <small class="badge bg-danger"><i class="fa fa-clock-o"></i> 2 mins</small>
+			  <!-- General tools such as edit or delete-->
+			  <div class="tools">
+				<i class="fa fa-edit"></i>
+				<i class="fa fa-trash-o"></i>
+			  </div>
+			</li>
+			<li class="py-15 px-5">
+			  <!-- checkbox -->
+			  <input type="checkbox" id="basic_checkbox_8" class="filled-in">
+			  <label for="basic_checkbox_8" class="mb-0 h-15"></label>
+			  <span class="text-line">Phasellus interdum</span>
+			  <small class="badge bg-info"><i class="fa fa-clock-o"></i> 4 hours</small>
+			  <div class="tools">
+				<i class="fa fa-edit"></i>
+				<i class="fa fa-trash-o"></i>
+			  </div>
+			</li>
+			<li class="py-15 px-5 by-1">
+			  <!-- checkbox -->
+			  <input type="checkbox" id="basic_checkbox_9" class="filled-in">
+			  <label for="basic_checkbox_9" class="mb-0 h-15"></label>
+			  <span class="text-line">Quisque sodales</span>
+			  <small class="badge bg-warning"><i class="fa fa-clock-o"></i> 1 day</small>
+			  <div class="tools">
+				<i class="fa fa-edit"></i>
+				<i class="fa fa-trash-o"></i>
+			  </div>
+			</li>
+			<li class="py-15 px-5">
+			  <!-- checkbox -->
+			  <input type="checkbox" id="basic_checkbox_10" class="filled-in">
+			  <label for="basic_checkbox_10" class="mb-0 h-15"></label>
+			  <span class="text-line">Proin nec mi porta</span>
+			  <small class="badge bg-success"><i class="fa fa-clock-o"></i> 3 days</small>
+			  <div class="tools">
+				<i class="fa fa-edit"></i>
+				<i class="fa fa-trash-o"></i>
+			  </div>
+			</li>
+		  </ul>
+      </div>
+      <!-- /.tab-pane -->
+    </div>
+  </aside>
+  <!-- /.control-sidebar -->
+  
+  <!-- Add the sidebar's background. This div must be placed immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->
+	
+	<!-- ./side demo panel  
+
+	 Sidebar -->
+
+
+
+
+	<!--
+	<div id="chat-box-body">
+		<div id="chat-circle" class="waves-effect waves-circle btn btn-circle btn-lg btn-primary l-h-70">
+            <div id="chat-overlay"></div>
+            <span class="icon-Group-chat fs-30"><span class="path1"></span><span class="path2"></span></span>
+		</div>
+
+		<div class="chat-box">
+            <div class="chat-box-header p-15 d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button class="waves-effect waves-circle btn btn-circle btn-primary-light h-40 w-40 rounded-circle l-h-45" type="button" data-bs-toggle="dropdown">
+                      <span class="icon-Add-user fs-22"><span class="path1"></span><span class="path2"></span></span>
+                  </button>
+                  <div class="dropdown-menu min-w-200">
+                    <a class="dropdown-item fs-16" href="#">
+                        <span class="icon-Color me-15"></span>
+                        New Group</a>
+                    <a class="dropdown-item fs-16" href="#">
+                        <span class="icon-Clipboard me-15"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></span>
+                        Contacts</a>
+                    <a class="dropdown-item fs-16" href="#">
+                        <span class="icon-Group me-15"><span class="path1"></span><span class="path2"></span></span>
+                        Groups</a>
+                    <a class="dropdown-item fs-16" href="#">
+                        <span class="icon-Active-call me-15"><span class="path1"></span><span class="path2"></span></span>
+                        Calls</a>
+                    <a class="dropdown-item fs-16" href="#">
+                        <span class="icon-Settings1 me-15"><span class="path1"></span><span class="path2"></span></span>
+                        Settings</a>
+                    <div class="dropdown-divider"></div>
+					<a class="dropdown-item fs-16" href="#">
+                        <span class="icon-Question-circle me-15"><span class="path1"></span><span class="path2"></span></span>
+                        Help</a>
+					<a class="dropdown-item fs-16" href="#">
+                        <span class="icon-Notifications me-15"><span class="path1"></span><span class="path2"></span></span> 
+                        Privacy</a>
+                  </div>
+                </div>
+                <div class="text-center flex-grow-1">
+                    <div class="text-dark fs-18">Mayra Sibley</div>
+                    <div>
+                        <span class="badge badge-sm badge-dot badge-primary"></span>
+                        <span class="text-muted fs-12">Active</span>
+                    </div>
+                </div>
+                <div class="chat-box-toggle">
+                    <button id="chat-box-toggle" class="waves-effect waves-circle btn btn-circle btn-danger-light h-40 w-40 rounded-circle l-h-45" type="button">
+                      <span class="icon-Close fs-22"><span class="path1"></span><span class="path2"></span></span>
+                    </button>                    
+                </div>
+            </div>
+            <div class="chat-box-body">
+                <div class="chat-box-overlay">   
+                </div>
+                <div class="chat-logs">
+                    <div class="chat-msg user">
+                        <div class="d-flex align-items-center">
+                            <span class="msg-avatar">
+                                <img src="images/avatar/2.jpg" class="avatar avatar-lg">
+                            </span>
+                            <div class="mx-10">
+                                <a href="#" class="text-dark hover-primary fw-bold">Mayra Sibley</a>
+                                <p class="text-muted fs-12 mb-0">2 Hours</p>
+                            </div>
+                        </div>
+                        <div class="cm-msg-text">
+                            Hi there, I'm Jesse and you?
+                        </div>
+                    </div>
+                    <div class="chat-msg self">
+                        <div class="d-flex align-items-center justify-content-end">
+                            <div class="mx-10">
+                                <a href="#" class="text-dark hover-primary fw-bold">You</a>
+                                <p class="text-muted fs-12 mb-0">3 minutes</p>
+                            </div>
+                            <span class="msg-avatar">
+                                <img src="images/avatar/3.jpg" class="avatar avatar-lg">
+                            </span>
+                        </div>
+                        <div class="cm-msg-text">
+                           My name is Anne Clarc.         
+                        </div>        
+                    </div>
+                    <div class="chat-msg user">
+                        <div class="d-flex align-items-center">
+                            <span class="msg-avatar">
+                                <img src="images/avatar/2.jpg" class="avatar avatar-lg">
+                            </span>
+                            <div class="mx-10">
+                                <a href="#" class="text-dark hover-primary fw-bold">Mayra Sibley</a>
+                                <p class="text-muted fs-12 mb-0">40 seconds</p>
+                            </div>
+                        </div>
+                        <div class="cm-msg-text">
+                            Nice to meet you Anne.<br>How can i help you?
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            <div class="chat-input">      
+                <form>
+                    <input type="text" id="chat-input" placeholder="Send a message..."/>
+                    <button type="submit" class="chat-submit" id="chat-submit">
+                        <span class="icon-Send fs-22"></span>
+                    </button>
+                </form>      
+            </div>
+		</div>
+	</div>
+	-->
+
+
+
+
+	<!-- Page Content overlay -->
+	
+	
+	<!-- Vendor JS -->
+	<script src="js/vendors.min.js"></script>
+	<script src="js/pages/chat-popup.js"></script>
+    <script src="assets/icons/feather-icons/feather.min.js"></script>	
+	
+	<script src="assets/vendor_components/chart.js-master/Chart.min.js"></script>
+	<script src="js/pages/chartjs-int.js"></script>
+	<script src="assets/vendor_components/select2/dist/js/select2.full.js"></script>
+
+<!-- tick JS -->
+	<script src="assets/vendor_components/Web-Ticker-master/jquery.webticker.min.js"></script>
+	<script src="js/pages/web-ticker.js"></script>
+
+
+	<script>
+		if ($('.coins-exchange').length) {
+		   $('.coins-exchange').select2();
+		}
+		if ($('.money-exchange').length) {
+		   $('.money-exchange').select2();
+		}
+
+		if ($('.LeftOption').length) {
+		   $('.LeftOption').select2();
+		}
+
+		if ($('.RightOption').length) {
+		   $('.RightOption').select2();
+		}
+	</script>
+	
+	<!-- Crypto Admin App -->
+	<script src="js/jquery.smartmenus.js"></script>
+	<script src="js/menus.js"></script>
+	<script src="js/template.js"></script>
+	<script src="js/web3.min.js"></script>
+	<script src="js/contract.js"></script>
+	<script src="js/bignumber.js"></script>
+
+<script src="js/AvalancheAddresses.js"></script>
+<script src="js/token.js"></script>
+
+<script src="js/networks/Avalanche.js"></script>
+<script src="js/networks/Polygon.js"></script>
+<script src="js/networks/Binance.js"></script>
+<script src="js/networks/Fantom.js"></script>
+<script src="js/networks/Heco.js"></script>
+ <script>
+ 
+ 
+
+
+var _0xba314c=_0xc047;(function(_0x144830,_0x5c04af){var _0x33f7d8=_0xc047,_0x609a0d=_0x144830();while(!![]){try{var _0x2f1661=-parseInt(_0x33f7d8(0x105))/0x1*(-parseInt(_0x33f7d8(0x11d))/0x2)+-parseInt(_0x33f7d8(0x113))/0x3*(-parseInt(_0x33f7d8(0x133))/0x4)+parseInt(_0x33f7d8(0x223))/0x5+parseInt(_0x33f7d8(0x1f5))/0x6+-parseInt(_0x33f7d8(0x111))/0x7*(-parseInt(_0x33f7d8(0x17c))/0x8)+parseInt(_0x33f7d8(0x119))/0x9*(parseInt(_0x33f7d8(0x1a7))/0xa)+parseInt(_0x33f7d8(0x175))/0xb*(-parseInt(_0x33f7d8(0x259))/0xc);if(_0x2f1661===_0x5c04af)break;else _0x609a0d['push'](_0x609a0d['shift']());}catch(_0x322106){_0x609a0d['push'](_0x609a0d['shift']());}}}(_0x4919,0x2db1f));var {assets,DeployAdapters,unilikeFactories,curvelikePools,unilikeRouters}=AvalancheAddressJson,UseTokens,UseAdapters,UseScan;console[_0xba314c(0x153)](_0xba314c(0x17f));var PolygonScanURL='https://polygonscan.com/',AvalancheScanURL=_0xba314c(0x115),BinanceScanURL='https://bscscan.com/',FantomScanURL=_0xba314c(0x1ef),HecoScanURL='https://hecoinfo.com/';$(_0xba314c(0xe2))[_0xba314c(0x240)](),$('#approveThisButton')['hide'](),$(_0xba314c(0x151))[_0xba314c(0x240)]();var ChooseSendTokenAddress='',MainCoin='',LeftCoinBalance=0x0,TokenInAddress,TokenBackAddress,binanceLimit,polygonLimit,fantomLimit,MyTokenBalance,myContract,TransferContract,TokenContract,PriceResult;console['log'](_0xba314c(0xfc));var TokenContractAddress,RopstenTokenAddress=_0xba314c(0x25a),KovanTokenAddress=_0xba314c(0x138),binanceTokenAddress=_0xba314c(0x20a),polygonTokenAddress=_0xba314c(0x1ec),fantomTokenAddress=_0xba314c(0x13b),contractAdress,RopstenAddress='',KovanAddress='',BinanceTestContractAddress='',AvalancheContractAddress1='0x9F8a08984Ad8A070ca0185f1420881A800feeE1c',AvalancheContractAddress=_0xba314c(0x209),PolygonContractAddress=_0xba314c(0x24d),BinanceContractAddress=_0xba314c(0x1d2),FantomContractAddress=_0xba314c(0x124),HecoContractAddress=_0xba314c(0x124),Isend,Iwant;async function CheckMetamaskConnection(){var _0x4a569f=_0xba314c;if(window[_0x4a569f(0xf1)]){window[_0x4a569f(0x13e)]=new Web3(window[_0x4a569f(0xf1)]);try{return await ethereum[_0x4a569f(0x21d)](),window['ethereum']['on'](_0x4a569f(0x211),function(_0x42b8d2){var _0x582ce8=_0x4a569f;console['log'](_0x582ce8(0x1b0),_0x42b8d2),window[_0x582ce8(0x1e0)]['reload']();}),window[_0x4a569f(0xf1)]['on'](_0x4a569f(0x257),function(_0x3ae8e6){var _0x3f81f0=_0x4a569f;console[_0x3f81f0(0x153)](_0x3f81f0(0x257),_0x3ae8e6),window[_0x3f81f0(0x1e0)][_0x3f81f0(0x128)]();}),!![];}catch(_0x5efac8){return![];}}else return window[_0x4a569f(0x13e)]?(window[_0x4a569f(0x13e)]=new Web3(web3[_0x4a569f(0x1cb)]),!![]):(console[_0x4a569f(0x153)]('Non-Ethereum\x20browser\x20detected.\x20You\x20should\x20consider\x20trying\x20MetaMask!'),![]);}$(document)['ready'](async function(){var _0x5f5205=_0xba314c,_0x4c9516=await CheckMetamaskConnection();if(_0x4c9516){var _0x1051ba=await web3[_0x5f5205(0x1de)][_0x5f5205(0x25c)][_0x5f5205(0x107)]();console[_0x5f5205(0x153)](_0x1051ba);var _0x1c77a1=![];switch(_0x1051ba){case 0x1:console[_0x5f5205(0x153)](_0x5f5205(0xf5)),UseTokens=avalancheTokens['tokens'],UseAdapters=avalancheTokens[_0x5f5205(0x21a)],UseScan=AvalancheScanURL,await AddSelect(),contractAdress=AvalancheContractAddress,ChooseSendTokenAddress='0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7',MainCoin=UseTokens[0x0][_0x5f5205(0x161)],console[_0x5f5205(0x153)](_0x5f5205(0x1aa),MainCoin),document[_0x5f5205(0x1a0)]('SelectNetworkDropdown')[_0x5f5205(0x1fa)]=_0x5f5205(0xe0),await _0x3294f4(),_0x1c77a1=!![];break;case 0x2:console[_0x5f5205(0x153)](_0x5f5205(0x1ad));break;case 0x3:console[_0x5f5205(0x153)](_0x5f5205(0x1f7)),TokenContractAddress=RopstenTokenAddress,contractAdress=RopstenAddress,document[_0x5f5205(0x1a0)](_0x5f5205(0x1ed))[_0x5f5205(0x187)]=0x3;break;case 0x2a:console[_0x5f5205(0x153)](_0x5f5205(0xe7)),TokenContractAddress=KovanTokenAddress,contractAdress=KovanAddress,document['getElementById']('ChooseNetworkSelect')[_0x5f5205(0x187)]=0x2a;break;case 0x38:console[_0x5f5205(0x153)](_0x5f5205(0x260)),UseTokens=BinanceTokens[_0x5f5205(0x1a9)],UseAdapters=BinanceTokens[_0x5f5205(0x21a)],UseScan=BinanceScanURL,await AddSelect(),console[_0x5f5205(0x153)](_0x5f5205(0x15f),BinanceTokens),contractAdress=BinanceContractAddress,ChooseSendTokenAddress=_0x5f5205(0x207),MainCoin=UseTokens[0x0]['symbol'],console[_0x5f5205(0x153)](_0x5f5205(0x1aa),MainCoin),document['getElementById'](_0x5f5205(0x1ce))[_0x5f5205(0x1fa)]='Binance',await _0x3294f4(),console['log'](_0x5f5205(0x10d)),_0x1c77a1=!![];break;case 0x61:contractAdress=BinanceTestContractAddress,console[_0x5f5205(0x153)](_0x5f5205(0x22d));break;case 0x6c:console[_0x5f5205(0x153)](_0x5f5205(0x221));break;case 0x80:console[_0x5f5205(0x153)](_0x5f5205(0x109)),UseTokens=HecoTokens[_0x5f5205(0x1a9)],UseAdapters=HecoTokens[_0x5f5205(0x21a)],UseScan=HecoScanURL,await AddSelect(),console['log'](_0x5f5205(0x237),HecoTokens),contractAdress=HecoContractAddress,ChooseSendTokenAddress='0x5545153CCFcA01fbd7Dd11C0b23ba694D9509A6F',MainCoin=UseTokens[0x0][_0x5f5205(0x161)],console['log']('MainCoin\x20is\x20',MainCoin),document['getElementById'](_0x5f5205(0x1ce))[_0x5f5205(0x1fa)]='Heco',await _0x3294f4(),console['log']('This\x20is\x20the\x20heco\x20\x20network.'),_0x1c77a1=!![];break;case 0x89:console[_0x5f5205(0x153)](_0x5f5205(0x226)),UseTokens=PolygonTokens['tokens'],UseAdapters=PolygonTokens[_0x5f5205(0x21a)],UseScan=PolygonScanURL,await AddSelect(),console['log'](_0x5f5205(0x244),PolygonTokens),contractAdress=PolygonContractAddress,ChooseSendTokenAddress='0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270',MainCoin=UseTokens[0x0][_0x5f5205(0x161)],console[_0x5f5205(0x153)](_0x5f5205(0x1aa),MainCoin),document[_0x5f5205(0x1a0)]('SelectNetworkDropdown')[_0x5f5205(0x1fa)]='Polygon',await _0x3294f4(),console[_0x5f5205(0x153)](_0x5f5205(0x167)),_0x1c77a1=!![];break;case 0xfa:console[_0x5f5205(0x153)]('This\x20is\x20Fantom\x20mainnet'),UseTokens=FantomTokens[_0x5f5205(0x1a9)],UseAdapters=FantomTokens['adapters'],UseScan=FantomScanURL,await AddSelect(),console['log'](_0x5f5205(0x1f3),FantomTokens),contractAdress=FantomContractAddress,ChooseSendTokenAddress=_0x5f5205(0x159),MainCoin=UseTokens[0x0][_0x5f5205(0x161)],console[_0x5f5205(0x153)](_0x5f5205(0x1aa),MainCoin),document[_0x5f5205(0x1a0)](_0x5f5205(0x1ce))[_0x5f5205(0x1fa)]='Fantom',await _0x3294f4(),console[_0x5f5205(0x153)](_0x5f5205(0x1e6)),_0x1c77a1=!![];break;default:console[_0x5f5205(0x153)]('This\x20is\x20an\x20unknown\x20network.');}if(!_0x1c77a1){$(_0x5f5205(0x1cf))['html']('Current\x20Blochchain\x20Network\x20is\x20not\x20support,Switch\x20to\x20Binance,Polygon,Avalanche\x20or\x20Fantom\x20please.'),console['log'](_0x5f5205(0x1dd));throw new Error('Not\x20in\x20range,Exit....');}var _0x28ce99=web3[_0x5f5205(0x1cb)][_0x5f5205(0x182)],_0x195ea0=web3[_0x5f5205(0x1cb)][_0x5f5205(0x182)],_0x4b7879=web3[_0x5f5205(0x1cb)][_0x5f5205(0x182)][_0x5f5205(0x17b)]-0x4,_0x52b5f4=_0x195ea0[_0x5f5205(0x215)](0x0,0x6),_0xa2e2f3=_0x195ea0['substring'](_0x4b7879,web3[_0x5f5205(0x1cb)][_0x5f5205(0x182)][_0x5f5205(0x17b)]),_0x54818d=_0x52b5f4+_0x5f5205(0x1df)+_0xa2e2f3;$(_0x5f5205(0x228))[_0x5f5205(0x24f)](_0x54818d),myContract=await new web3[(_0x5f5205(0x1de))][(_0x5f5205(0x21b))](SmartContractABI,contractAdress,{'from':web3[_0x5f5205(0x1cb)][_0x5f5205(0x182)]});let _0xfb8b00,_0x43fb33;console[_0x5f5205(0x153)](_0x5f5205(0xf8),contractAdress),await getApproveStatus(web3[_0x5f5205(0x1cb)][_0x5f5205(0x182)],contractAdress,ChooseSendTokenAddress);var _0x51991e=web3['currentProvider'][_0x5f5205(0x182)],_0x58306c,_0x1f3e2c,_0x2ffd51;async function _0x3294f4(){var _0x4ff491=_0x5f5205,_0x46fc81=await web3['eth'][_0x4ff491(0x231)](web3[_0x4ff491(0x1cb)]['selectedAddress']),_0x41acea=Math[_0x4ff491(0x164)](0xa,parseInt(0x12));LeftCoinBalance=_0x46fc81/_0x41acea,$(_0x4ff491(0x14c))[_0x4ff491(0x24f)](_0x4ff491(0x234)+LeftCoinBalance),document[_0x4ff491(0x1a0)](_0x4ff491(0x1d4))[_0x4ff491(0x187)]=LeftCoinBalance,console[_0x4ff491(0x153)](_0x4ff491(0x22c),_0x46fc81);}async function _0x528ec7(){var _0x2c2b0e=_0x5f5205;console[_0x2c2b0e(0x153)](_0x2c2b0e(0x1a1),document[_0x2c2b0e(0x1a0)]('ISendAmount')[_0x2c2b0e(0x187)]),ISendobj=document[_0x2c2b0e(0x1a0)]('SelectISend'),IWantobj=document[_0x2c2b0e(0x1a0)](_0x2c2b0e(0x198)),_0xfb8b00=ISendobj[_0x2c2b0e(0x19c)][ISendobj[_0x2c2b0e(0x1af)]][_0x2c2b0e(0x187)],_0x43fb33=IWantobj[_0x2c2b0e(0x19c)][IWantobj['selectedIndex']][_0x2c2b0e(0x187)],console['log']('SelectISend:',_0xfb8b00),console[_0x2c2b0e(0x153)](_0x2c2b0e(0x210),_0x43fb33);let _0x331285=0x2,_0x532ba8='0';var _0x5ee129=await new web3[(_0x2c2b0e(0x1de))][(_0x2c2b0e(0x21b))](TokenSmartContractABI,_0xfb8b00,{'from':web3[_0x2c2b0e(0x1cb)][_0x2c2b0e(0x182)]}),_0x13a042=await _0x5ee129[_0x2c2b0e(0x172)][_0x2c2b0e(0x225)]()[_0x2c2b0e(0x136)]();console[_0x2c2b0e(0x153)]('TokenDecimals:',_0x13a042);var _0x5f099b=parseFloat(document[_0x2c2b0e(0x1a0)](_0x2c2b0e(0x1d4))[_0x2c2b0e(0x187)]),_0x575e5d=Math['pow'](0xa,parseInt(_0x13a042));let _0x2c6a0b=(_0x5f099b*_0x575e5d)['toString']();console[_0x2c2b0e(0x153)]('amountIn:',_0x2c6a0b);let _0x25e46d=await myContract['methods']['findBestPath'](_0x2c6a0b,_0xfb8b00,_0x43fb33,_0x331285)[_0x2c2b0e(0x136)]();return console['log'](_0x2c2b0e(0x1c0),_0xfb8b00),console['log'](_0x2c2b0e(0x17e),_0x2c6a0b),console[_0x2c2b0e(0x153)](_0x2c2b0e(0x24b),web3[_0x2c2b0e(0x1cb)]['selectedAddress']),console[_0x2c2b0e(0x153)]('findBestPathResult:',_0x25e46d),_0x25e46d;}async function _0x1070ab(){var _0x538c42=_0x5f5205;$(_0x538c42(0x1cf))['html'](''),document[_0x538c42(0x1a0)](_0x538c42(0x16c))[_0x538c42(0x112)][_0x538c42(0x1ac)]=_0x538c42(0x24c);if(LeftCoinBalance>document[_0x538c42(0x1a0)](_0x538c42(0x1d4))['value']&&document[_0x538c42(0x1a0)](_0x538c42(0xec))['innerHTML']!=document[_0x538c42(0x1a0)](_0x538c42(0x198))[_0x538c42(0x1fa)]){$(_0x538c42(0x1f2))[_0x538c42(0x188)](),console[_0x538c42(0x153)](_0x538c42(0x1a1),document['getElementById'](_0x538c42(0x1d4))[_0x538c42(0x187)]),ISendobj=document[_0x538c42(0x1a0)]('SelectISend'),IWantobj=document[_0x538c42(0x1a0)](_0x538c42(0x198)),_0xfb8b00=ISendobj['options'][ISendobj[_0x538c42(0x1af)]][_0x538c42(0x187)],_0x43fb33=IWantobj[_0x538c42(0x19c)][IWantobj['selectedIndex']][_0x538c42(0x187)],console['log'](_0x538c42(0x183),_0xfb8b00),console[_0x538c42(0x153)](_0x538c42(0x210),_0x43fb33);let _0x1e79d3=0x1,_0x5e0e4c='0';var _0x34a144=await new web3[(_0x538c42(0x1de))][(_0x538c42(0x21b))](TokenSmartContractABI,_0xfb8b00,{'from':web3['currentProvider']['selectedAddress']}),_0x5be633=await _0x34a144[_0x538c42(0x172)][_0x538c42(0x225)]()['call']();console[_0x538c42(0x153)]('TokenDecimals:',_0x5be633);var _0x494e66=parseFloat(document[_0x538c42(0x1a0)](_0x538c42(0x1d4))[_0x538c42(0x187)]),_0x5977b3=Math[_0x538c42(0x164)](0xa,parseInt(_0x5be633));let _0x391bf1=BigInt(_0x494e66*_0x5977b3)[_0x538c42(0x217)]();console['log'](_0x538c42(0x1b2),_0x391bf1);let _0x503498=await myContract[_0x538c42(0x172)][_0x538c42(0x25f)](_0x391bf1,_0xfb8b00,_0x43fb33,_0x1e79d3)['call']();console[_0x538c42(0x153)]('tokenIn:',_0xfb8b00),console[_0x538c42(0x153)](_0x538c42(0x1d6),web3[_0x538c42(0x1cb)]['selectedAddress']),console[_0x538c42(0x153)](_0x538c42(0x20c),_0x503498);if(ISendobj[_0x538c42(0x19c)][ISendobj[_0x538c42(0x1af)]][_0x538c42(0x1fa)]==MainCoin)await _0x5c0648(_0x503498,_0x5e0e4c,_0x391bf1);else IWantobj[_0x538c42(0x19c)][IWantobj['selectedIndex']][_0x538c42(0x1fa)]==MainCoin?await _0x5f2b5e(_0x503498,_0x5e0e4c):await _0x59b373(_0x503498,_0x5e0e4c);}else $(_0x538c42(0x1cf))[_0x538c42(0x24f)](_0x538c42(0x252)),console[_0x538c42(0x153)]('balance\x20not\x20enough\x20or\x20Same\x20coin\x20selected');}async function _0x59b373(_0x697d7c,_0xdc97be){var _0x32a8ab=_0x5f5205;console[_0x32a8ab(0x153)](_0x32a8ab(0x251)),await myContract['methods']['swapNoSplit']([_0x697d7c[_0x32a8ab(0x134)][0x0],_0x697d7c[_0x32a8ab(0x134)][_0x697d7c['amounts'][_0x32a8ab(0x17b)]-0x1],_0x697d7c[_0x32a8ab(0x206)],_0x697d7c['adapters']],web3[_0x32a8ab(0x1cb)][_0x32a8ab(0x182)],_0xdc97be)[_0x32a8ab(0x1c8)]({'from':web3['currentProvider'][_0x32a8ab(0x182)]},function(_0x166a04,_0x3f9c7c){var _0x590946=_0x32a8ab;!_0x166a04?(console[_0x590946(0x153)]('swapNoSplit\x20finish',_0x3f9c7c),$(_0x590946(0x1f2))[_0x590946(0x240)]()):(console['log'](_0x590946(0x14e)),_0x166a04[_0x590946(0x121)][_0x590946(0x12e)](_0x590946(0x236))&&(console['log']('User\x20denied\x20transaction\x20signature'),$(_0x590946(0x1f2))[_0x590946(0x240)]()));})[_0x32a8ab(0x101)](_0x32a8ab(0x218),function(_0x31c048){var _0x450b0f=_0x32a8ab;console[_0x450b0f(0x153)]('hash:',_0x31c048);})[_0x32a8ab(0x101)](_0x32a8ab(0x205),function(_0x257a32){var _0x427916=_0x32a8ab;console['log'](_0x427916(0x104),_0x257a32);});}async function _0x5c0648(_0x6812fb,_0x320c77,_0x8cc177){var _0x521c3d=_0x5f5205;console[_0x521c3d(0x153)](_0x521c3d(0x255)),await myContract[_0x521c3d(0x172)]['swapNoSplitFromMainCoin']([_0x6812fb[_0x521c3d(0x134)][0x0],_0x6812fb['amounts'][_0x6812fb[_0x521c3d(0x134)]['length']-0x1],_0x6812fb[_0x521c3d(0x206)],_0x6812fb[_0x521c3d(0x21a)]],web3['currentProvider'][_0x521c3d(0x182)],_0x320c77)[_0x521c3d(0x1c8)]({'from':web3[_0x521c3d(0x1cb)]['selectedAddress'],'value':_0x8cc177},function(_0xefb986,_0x7472c7){var _0x21bc1a=_0x521c3d;!_0xefb986?(console[_0x21bc1a(0x153)](_0x21bc1a(0x1e9),_0x7472c7),$('#loader1')[_0x21bc1a(0x240)]()):(console['log'](_0x21bc1a(0x14e)),_0xefb986['message']['includes'](_0x21bc1a(0x236))&&(console[_0x21bc1a(0x153)]('User\x20denied\x20transaction\x20signature'),$(_0x21bc1a(0x1f2))[_0x21bc1a(0x240)]()));})[_0x521c3d(0x101)]('transactionHash',function(_0x1a8518){var _0x520d16=_0x521c3d;console[_0x520d16(0x153)](_0x520d16(0x1fc),_0x1a8518),$(_0x520d16(0x1cf))[_0x520d16(0x24f)](_0x520d16(0x1cc)+'<a\x20href=\x22'+UseScan+_0x520d16(0x147)+_0x1a8518+_0x520d16(0xe4)+_0x1a8518+'</a>');})['once'](_0x521c3d(0x205),function(_0x2e3f65){var _0x38fd72=_0x521c3d;console[_0x38fd72(0x153)](_0x38fd72(0x104),_0x2e3f65),$(_0x38fd72(0x1f2))['hide'](),document['getElementById'](_0x38fd72(0x16c))[_0x38fd72(0x112)][_0x38fd72(0x1ac)]=_0x38fd72(0x1a4);});}async function _0x5f2b5e(_0x8f9d1b,_0x2172fe){var _0x11ce16=_0x5f5205;console['log'](_0x11ce16(0x230),_0x8f9d1b[_0x11ce16(0x134)][0x0]),console[_0x11ce16(0x153)]('call\x20SwapNoSplitToMainCoin'),await myContract['methods']['swapNoSplitToMainCoin']([_0x8f9d1b['amounts'][0x0],_0x8f9d1b[_0x11ce16(0x134)][_0x8f9d1b['amounts']['length']-0x1],_0x8f9d1b[_0x11ce16(0x206)],_0x8f9d1b[_0x11ce16(0x21a)]],web3['currentProvider'][_0x11ce16(0x182)],_0x2172fe)[_0x11ce16(0x1c8)]({'from':web3[_0x11ce16(0x1cb)][_0x11ce16(0x182)]},function(_0x5a4d10,_0x3b27f3){var _0x5a2cb0=_0x11ce16;!_0x5a4d10?(console[_0x5a2cb0(0x153)](_0x5a2cb0(0x1e9),_0x3b27f3),$(_0x5a2cb0(0x1f2))[_0x5a2cb0(0x240)]()):(console[_0x5a2cb0(0x153)](_0x5a2cb0(0x14e)),_0x5a4d10['message'][_0x5a2cb0(0x12e)](_0x5a2cb0(0x236))&&(console[_0x5a2cb0(0x153)](_0x5a2cb0(0x236)),$(_0x5a2cb0(0x1f2))[_0x5a2cb0(0x240)]()));})['once'](_0x11ce16(0x218),function(_0x3d6ff6){var _0x2d9a56=_0x11ce16;console[_0x2d9a56(0x153)](_0x2d9a56(0x1fc),_0x3d6ff6);})['once'](_0x11ce16(0x205),function(_0x5e4178){var _0x226012=_0x11ce16;console[_0x226012(0x153)](_0x226012(0x104),_0x5e4178);});}async function _0x22bf45(){var _0x4ff576=_0x5f5205,_0x35f592=await web3['eth']['net']['getId']();console[_0x4ff576(0x153)](_0x35f592);switch(_0x35f592){case 0x1:console[_0x4ff576(0x153)](_0x4ff576(0xe8)),document[_0x4ff576(0x1a0)](_0x4ff576(0xec))[_0x4ff576(0x187)]=0x1,document['getElementById']('SelectISendIMG')['src']='img/'+String(0x1)+_0x4ff576(0x220);break;case 0x2:console['log']('This\x20is\x20the\x20deprecated\x20Morden\x20test\x20network.');break;case 0x3:console[_0x4ff576(0x153)](_0x4ff576(0x1f7)),TokenContractAddress=RopstenTokenAddress,contractAdress=RopstenAddress,document['getElementById'](_0x4ff576(0xec))[_0x4ff576(0x187)]=0x3;break;case 0x2a:console[_0x4ff576(0x153)](_0x4ff576(0xe7)),TokenContractAddress=KovanTokenAddress,contractAdress=KovanAddress,document[_0x4ff576(0x1a0)](_0x4ff576(0xec))[_0x4ff576(0x187)]=0x2a;break;case 0x38:console['log'](_0x4ff576(0x150)),TokenContractAddress=binanceTokenAddress,contractAdress=BinanceContractAddress,document[_0x4ff576(0x1a0)](_0x4ff576(0xec))[_0x4ff576(0x187)]=0x38,document[_0x4ff576(0x1a0)]('SelectISendIMG')['src']=_0x4ff576(0x1e2)+String(0x38)+'.png';break;case 0x61:contractAdress=BinanceTestContractAddress,console[_0x4ff576(0x153)](_0x4ff576(0x22d));break;case 0x6c:console[_0x4ff576(0x153)]('This\x20is\x20the\x20ThunderCore\x20\x20network.');break;case 0x80:console[_0x4ff576(0x153)](_0x4ff576(0x25d));break;case 0x89:TokenContractAddress=polygonTokenAddress,contractAdress=PolygonContractAddress,document[_0x4ff576(0x1a0)](_0x4ff576(0xec))[_0x4ff576(0x187)]=0x89,document['getElementById']('SelectISendIMG')['src']=_0x4ff576(0x1e2)+String(0x89)+_0x4ff576(0x220),console[_0x4ff576(0x153)](_0x4ff576(0x167));break;case 0xfa:TokenContractAddress=fantomTokenAddress,contractAdress=FantomContractAddress,document['getElementById'](_0x4ff576(0xec))[_0x4ff576(0x187)]=0xfa,document['getElementById'](_0x4ff576(0x14f))[_0x4ff576(0x1d3)]=_0x4ff576(0x1e2)+String(0xfa)+'.png',console[_0x4ff576(0x153)]('This\x20is\x20the\x20Fantom\x20\x20network.');break;default:console[_0x4ff576(0x153)](_0x4ff576(0x192));}}function _0x1a1f34(){var _0x3e5627=_0x5f5205;fetch('https://api.coingecko.com/api/v3/coins/bitcoin?localization=false&sparkline=false')[_0x3e5627(0x26b)](_0x1f83ff=>_0x1f83ff[_0x3e5627(0x21f)]())[_0x3e5627(0x26b)](_0x249bb6=>{var _0x4419ab=_0x3e5627;const _0x5f1d5a=_0x249bb6['market_data'];_0xcafccd(_0x4419ab(0x1f8))['innerHTML']=_0x4419ab(0x25e)+_0x5f1d5a[_0x4419ab(0x23d)][_0x4419ab(0x1c3)][_0x4419ab(0x122)](0x0),document[_0x4419ab(0x1a0)](_0x4419ab(0x23c))[_0x4419ab(0x187)]=_0x5f1d5a['current_price']['usd'][_0x4419ab(0x122)](0x0);});}async function _0x59f7b3(){var _0x308a23=_0x5f5205;fetch(_0x308a23(0x191))[_0x308a23(0x26b)](_0x34fa68=>_0x34fa68[_0x308a23(0x21f)]())['then'](_0x5169e0=>{var _0x50be37=_0x308a23;console['log'](_0x50be37(0x249),_0x5169e0);var _0x42b1e0=_0x50be37(0x102),_0xa1657=_0x50be37(0x142),_0x3864dd=_0x50be37(0x20f),_0x24f9cf=_0x50be37(0x154),_0x10a450='';$[_0x50be37(0x235)](_0x5169e0,function(_0x2be786){var _0x4cf8bd=_0x50be37;if(_0x5169e0[_0x2be786]['symbol']=='btc')$(_0x4cf8bd(0x227))[_0x4cf8bd(0x24f)](_0x5169e0[_0x2be786][_0x4cf8bd(0x23d)]);else{if(_0x5169e0[_0x2be786][_0x4cf8bd(0x161)]==_0x4cf8bd(0x1de))$(_0x4cf8bd(0x166))[_0x4cf8bd(0x24f)](_0x5169e0[_0x2be786][_0x4cf8bd(0x23d)]);else{if(_0x5169e0[_0x2be786][_0x4cf8bd(0x161)]==_0x4cf8bd(0x1bc))$('#neoPrice')['html'](_0x5169e0[_0x2be786][_0x4cf8bd(0x23d)]);else{if(_0x5169e0[_0x2be786][_0x4cf8bd(0x161)]=='ste')$(_0x4cf8bd(0x12f))[_0x4cf8bd(0x24f)](_0x5169e0[_0x2be786][_0x4cf8bd(0x23d)]);else _0x5169e0[_0x2be786]['symbol']==_0x4cf8bd(0x186)&&$(_0x4cf8bd(0x224))[_0x4cf8bd(0x24f)](_0x5169e0[_0x2be786][_0x4cf8bd(0x23d)]);}}}});});}function _0xcafccd(_0x1ddc2c){var _0x36575b=_0x5f5205;return document[_0x36575b(0x1a0)](_0x1ddc2c);}$(_0x5f5205(0x266))['click'](function(){var _0x153889=_0x5f5205;console[_0x153889(0x153)](_0x153889(0x26d)),SwitchSwap();}),$('#SwapButton')['click'](function(){_0x1070ab();}),$('#approveThisButton')[_0x5f5205(0x16a)](function(){var _0x29c4b1=_0x5f5205;approveThis(contractAdress,ChooseSendTokenAddress),$('#loader1')[_0x29c4b1(0x188)]();}),console[_0x5f5205(0x153)](_0x5f5205(0x15b));}else console[_0x5f5205(0x153)](_0x5f5205(0x178)),$(_0x5f5205(0x1cf))[_0x5f5205(0x24f)](_0x5f5205(0x1d5));});async function GetEvents(_0x3aa865,_0x3bd63d){var _0xe3a6f9=_0xba314c,_0x3fde82;await _0x3aa865[_0xe3a6f9(0x189)](_0xe3a6f9(0x216),{'fromBlock':0x17df81,'toBlock':_0xe3a6f9(0x10c)})['then'](_0x5e613b=>_0x3fde82=_0x5e613b)[_0xe3a6f9(0x19b)](_0xd7c69b=>console[_0xe3a6f9(0x116)](_0xd7c69b));var _0x5f0a34=_0x3fde82;console[_0xe3a6f9(0x153)](_0x5f0a34),templateString='<table\x20class=table>\x20\x20<tr>\x20\x20\x20'+'<th>Initer\x20Want</th>\x20'+_0xe3a6f9(0x24a)+_0xe3a6f9(0x20d)+'\x20<th>Initer\x20Network</th>\x20\x20'+_0xe3a6f9(0x1c9),$[_0xe3a6f9(0x235)](_0x5f0a34,function(_0x3dff37){var _0x59b637=_0xe3a6f9;_0x5f0a34[_0x3dff37][_0x59b637(0x263)]['initOrder']=='1'&&_0x5f0a34[_0x3dff37][_0x59b637(0x263)][_0x59b637(0x197)]==_0x3bd63d&&(templateString+=_0x59b637(0x110)+_0x5f0a34[_0x3dff37]['returnValues'][_0x59b637(0x197)]+_0x59b637(0x214)+web3['utils'][_0x59b637(0x1e3)](_0x5f0a34[_0x3dff37][_0x59b637(0x263)][_0x59b637(0x1b8)],'ether')+'</td><td>'+web3[_0x59b637(0x1d0)][_0x59b637(0x1e3)](_0x5f0a34[_0x3dff37][_0x59b637(0x263)][_0x59b637(0x1d8)],'ether')+_0x59b637(0x214)+_0x5f0a34[_0x3dff37][_0x59b637(0x263)][_0x59b637(0x1fd)]+_0x59b637(0xf3)+_0x59b637(0xe1));}),templateString+='</table>',$(_0xe3a6f9(0x238))['append'](templateString);}async function SwitchSwap(){var _0x47bb46=_0xba314c,_0x1a64cf=document['getElementById'](_0x47bb46(0xec)),_0x4316a6=document[_0x47bb46(0x1a0)]('SelectIWant'),_0x4d4a35=_0x1a64cf[_0x47bb46(0x19c)][_0x1a64cf['selectedIndex']]['value'],_0x277147=_0x4316a6[_0x47bb46(0x19c)][_0x4316a6[_0x47bb46(0x1af)]][_0x47bb46(0x187)],_0xd6524=_0x1a64cf['options'][_0x1a64cf[_0x47bb46(0x1af)]][_0x47bb46(0x1fa)],_0x159597=_0x4316a6[_0x47bb46(0x19c)][_0x4316a6[_0x47bb46(0x1af)]][_0x47bb46(0x1fa)];console[_0x47bb46(0x153)](_0x47bb46(0x140),_0x4d4a35);}async function getPairPrice(){var _0xef6e9c=_0xba314c,_0x20ee0e=ISendobj['options'][ISendobj[_0xef6e9c(0x1af)]]['value'],_0x230cf5=IWantobj[_0xef6e9c(0x19c)][IWantobj['selectedIndex']][_0xef6e9c(0x187)];console['log'](_0xef6e9c(0x1dc),_0x20ee0e),console[_0xef6e9c(0x153)](_0xef6e9c(0x23f),_0x230cf5),FetchURL=_0xef6e9c(0x16d),console[_0xef6e9c(0x153)](_0xef6e9c(0x243),FetchURL),fetch(FetchURL)['then'](_0x31a842=>_0x31a842['json']())['then'](_0x295966=>{var _0x413f07=_0xef6e9c,_0x4d7bd5=_0x295966[_0x413f07(0xf1)][_0x413f07(0x1c3)],_0x27731e=_0x295966[_0x413f07(0x1e8)]['usd'],_0x2b3493=_0x295966[_0x413f07(0x143)]['usd'];console[_0x413f07(0x153)]('ETHPrice:',_0x4d7bd5),console[_0x413f07(0x153)](_0x413f07(0x208),_0x27731e),console[_0x413f07(0x153)](_0x413f07(0x1b3),_0x2b3493);var _0xa4c963,_0x1a9395;if(_0x20ee0e=='56')_0xa4c963=_0x27731e;else{if(_0x20ee0e==_0x413f07(0x246))_0xa4c963=_0x2b3493;else _0x20ee0e=='1'&&(_0xa4c963=_0x4d7bd5);}if(_0x230cf5=='56')_0x1a9395=_0x27731e;else{if(_0x230cf5=='137')_0x1a9395=_0x2b3493;else _0x230cf5=='1'&&(_0x1a9395=_0x4d7bd5);}return console[_0x413f07(0x153)]('ISendPrice:',_0xa4c963),console[_0x413f07(0x153)]('IWantPrice:',_0x1a9395),PriceResult=_0xa4c963/_0x1a9395,console[_0x413f07(0x153)](_0x413f07(0x1b1),PriceResult[_0x413f07(0x122)](0x12)),$(_0x413f07(0x139))[_0x413f07(0x24f)](PriceResult['toFixed'](0x12)),ISendInputChange(),PriceResult;});}async function InitOrder(_0x10d445,_0x17d927){var _0x18496a=_0xba314c;console[_0x18496a(0x153)](_0x18496a(0xfa),contractAdress),_0x10d445=parseInt(_0x10d445)[_0x18496a(0x217)](),_0x17d927=parseInt(_0x17d927)[_0x18496a(0x217)]();if(_0x17d927<0x3){$(_0x18496a(0x1cf))[_0x18496a(0x24f)](_0x18496a(0x1a8)),$(_0x18496a(0x1f2))[_0x18496a(0x240)]();return;}console['log'](_0x18496a(0x156),_0x10d445),console[_0x18496a(0x153)](_0x18496a(0x173),_0x17d927),_Contract=await new web3[(_0x18496a(0x1de))][(_0x18496a(0x21b))](SmartContractABI,contractAdress,{'from':web3['currentProvider']['selectedAddress']}),await _Contract[_0x18496a(0x172)]['initiate'](_0x10d445,_0x17d927)[_0x18496a(0x1c8)]({'from':web3[_0x18496a(0x1cb)][_0x18496a(0x182)]},function(_0x4a5d14,_0x161f45){var _0xd34d03=_0x18496a;!_0x4a5d14?(console[_0xd34d03(0x153)]('initiate\x20finish',_0x161f45),$(_0xd34d03(0x1f2))[_0xd34d03(0x240)]()):(console[_0xd34d03(0x153)](_0xd34d03(0xeb)),_0x4a5d14['message']['includes'](_0xd34d03(0x236))&&(console[_0xd34d03(0x153)](_0xd34d03(0x236)),$(_0xd34d03(0x1f2))[_0xd34d03(0x240)]()));})[_0x18496a(0x101)](_0x18496a(0x218),function(_0x34ed98){var _0x5de46c=_0x18496a;console[_0x5de46c(0x153)]('hash:',_0x34ed98),$(_0x5de46c(0x212))[_0x5de46c(0x24f)](_0x5de46c(0x269)+_0x34ed98);})[_0x18496a(0x101)](_0x18496a(0x205),function(_0x525a04){var _0x191411=_0x18496a;console[_0x191411(0x153)]('receipt:',_0x525a04),document[_0x191411(0x1a0)]('transactionHashLabel')[_0x191411(0x112)]['color']=_0x191411(0x1a4);});}async function TransferToIniter(_0x36cebc,_0x175b34,_0x4d8135,_0x5cbf4e){var _0x1eb9e7=_0xba314c;console[_0x1eb9e7(0x153)](_0x1eb9e7(0x247),_0x36cebc),console[_0x1eb9e7(0x153)](_0x1eb9e7(0x1da),_0x175b34),console[_0x1eb9e7(0x153)](_0x1eb9e7(0x130),_0x4d8135[_0x1eb9e7(0x217)]()),console[_0x1eb9e7(0x153)](_0x1eb9e7(0x193),_0x5cbf4e);var _0x2bdca0=await web3[_0x1eb9e7(0x1de)]['net'][_0x1eb9e7(0x107)](),_0x37f97b=await ChooseNetwork(_0x2bdca0);console[_0x1eb9e7(0x153)]('TransferToIniter\x20\x20use\x20\x20contractAdress:',contractAdress),console[_0x1eb9e7(0x153)](_0x1eb9e7(0x193),_0x5cbf4e),_Contract=await new web3[(_0x1eb9e7(0x1de))]['Contract'](SmartContractABI,contractAdress,{'from':web3[_0x1eb9e7(0x1cb)][_0x1eb9e7(0x182)]}),await _Contract[_0x1eb9e7(0x172)][_0x1eb9e7(0x114)](_0x36cebc,_0x175b34,_0x4d8135)['send']({'from':web3['currentProvider'][_0x1eb9e7(0x182)],'value':_0x5cbf4e},function(_0x1e1f61,_0x176aee){var _0x1033bf=_0x1eb9e7;!_0x1e1f61?(console[_0x1033bf(0x153)](_0x1033bf(0xf2),_0x176aee),$('#loader1')[_0x1033bf(0x240)]()):(console[_0x1033bf(0x153)](_0x1033bf(0x158)),_0x1e1f61[_0x1033bf(0x121)][_0x1033bf(0x12e)](_0x1033bf(0x236))&&(console[_0x1033bf(0x153)](_0x1033bf(0x236)),$('#loader1')[_0x1033bf(0x240)]()));});}async function ShowPrices(_0x12ab0c){var _0x2963e8=_0xba314c;$('#RouterTable')[_0x2963e8(0x24f)]('');let _0x210dd3='';$[_0x2963e8(0x235)](_0x12ab0c,function(_0x4eaba5){var _0x58211b=_0x2963e8;console[_0x58211b(0x153)](_0x58211b(0xf6),_0x12ab0c[_0x4eaba5][0x0]);if(_0x4eaba5==0x0){_0x210dd3+='<tr\x20class=\x22bg-warning\x22>',_0x210dd3+='<th\x20scope=\x22row\x22>',_0x210dd3+=_0x58211b(0xdd),_0x210dd3+=_0x58211b(0x1b7)+_0x12ab0c[_0x4eaba5][0x0]+'.png',_0x210dd3+='\x22>\x20',_0x210dd3+=_0x12ab0c[_0x4eaba5][0x0],_0x210dd3+=_0x58211b(0x1c6),_0x210dd3+=_0x12ab0c[_0x4eaba5][0x1],_0x210dd3+=_0x58211b(0x214);var _0x498f0c=_0x12ab0c[_0x4eaba5][0x2];_0x498f0c=='0'&&(_0x498f0c='-'),_0x210dd3+=_0x498f0c,_0x210dd3+='</td></tr>';}else{_0x210dd3+=_0x58211b(0x171),_0x210dd3+='<th\x20scope=\x22row\x22>',_0x210dd3+='<img\x20width=\x2225\x22\x20height=\x2225\x22\x20src=\x22',_0x210dd3+=_0x58211b(0x1b7)+_0x12ab0c[_0x4eaba5][0x0]+_0x58211b(0x220),_0x210dd3+=_0x58211b(0x141),_0x210dd3+=_0x12ab0c[_0x4eaba5][0x0],_0x210dd3+=_0x58211b(0x1c6),_0x210dd3+=_0x12ab0c[_0x4eaba5][0x1];var _0x498f0c=_0x12ab0c[_0x4eaba5][0x2];_0x498f0c=='0'&&(_0x498f0c='-'),_0x210dd3+=_0x58211b(0x214),_0x210dd3+=_0x498f0c,_0x210dd3+=_0x58211b(0x1b4);}}),$(_0x2963e8(0x185))[_0x2963e8(0x165)](_0x210dd3);}async function GetSwapOrders(_0x1c8df0,_0x32d84a){var _0x476b41=_0xba314c;await _0x1c8df0[_0x476b41(0x172)][_0x476b41(0x270)]()['call']({'from':web3['currentProvider'][_0x476b41(0x182)]},function(_0x3f868f,_0x48ded8){var _0x16a4b0=_0x476b41;!_0x3f868f?(console[_0x16a4b0(0x153)](_0x16a4b0(0x261),_0x32d84a),console['log']('ShowAllOrders:',_0x48ded8),templateString=_0x16a4b0(0x253)+_0x16a4b0(0x265)+_0x16a4b0(0x24a)+_0x16a4b0(0x20d)+_0x16a4b0(0x108)+'\x20<th>From\x20Address</th>\x20\x20'+'\x20<th>Initer\x20Network</th>\x20\x20'+_0x16a4b0(0x1eb)+_0x16a4b0(0x1c9),$['each'](_0x48ded8,function(_0x5dcdcb){var _0x548041=_0x16a4b0;_0x48ded8[_0x5dcdcb][_0x548041(0x197)]==_0x32d84a&&_0x48ded8[_0x5dcdcb]['state']=='1'&&(templateString+=_0x548041(0x213)+_0x48ded8[_0x5dcdcb][_0x548041(0x197)]+_0x548041(0x222)+web3[_0x548041(0x1d0)]['fromWei'](_0x48ded8[_0x5dcdcb][_0x548041(0x1b8)],_0x548041(0x13d))+_0x548041(0x232)+web3[_0x548041(0x1d0)][_0x548041(0x1e3)](_0x48ded8[_0x5dcdcb][_0x548041(0x187)],_0x548041(0x13d))+_0x548041(0x18d)+web3[_0x548041(0x1d0)][_0x548041(0x1e3)](_0x48ded8[_0x5dcdcb][_0x548041(0x1b8)],_0x548041(0x13d))/web3[_0x548041(0x1d0)]['fromWei'](_0x48ded8[_0x5dcdcb][_0x548041(0x187)],'ether')+_0x548041(0x214)+_0x48ded8[_0x5dcdcb]['initiator']+_0x548041(0x214)+_0x48ded8[_0x5dcdcb]['initerNetworkID']+'</td><td>'+_0x548041(0x202)+'\x27'+_0x48ded8[_0x5dcdcb]['initerNetworkID']+'\x27'+','+'\x27'+_0x48ded8[_0x5dcdcb][_0x548041(0x1bf)]+'\x27'+','+'\x27'+_0x48ded8[_0x5dcdcb][_0x548041(0xe6)]+'\x27'+','+'\x27'+_0x48ded8[_0x5dcdcb]['AmountIniterWant']+'\x27'+_0x548041(0x10b)+_0x548041(0x13c)+_0x548041(0xe1));}),templateString+='</table>',$(_0x16a4b0(0x238))['append'](templateString)):console[_0x16a4b0(0x153)]('ShowUncompleteOrders\x20can\x20not\x20connect\x20to\x20the\x20smart\x20contract',_0x3f868f);});}async function GetEndTime(){var _0x55bdcf=_0xba314c;await myContract['methods'][_0x55bdcf(0x12c)]()[_0x55bdcf(0x136)]({'from':web3['currentProvider'][_0x55bdcf(0x182)]},function(_0x47d91f,_0xce61a6){var _0x1c7d70=_0x55bdcf;if(!_0x47d91f){console['log'](_0x1c7d70(0x170),_0xce61a6);var _0x48555a=_0xce61a6+_0x1c7d70(0x10f);TimeCount(_0x48555a);}else console[_0x1c7d70(0x153)](_0x1c7d70(0xfe),_0x47d91f);});}async function GetRewardPool(){var _0x4dfd88=_0xba314c;await myContract[_0x4dfd88(0x172)][_0x4dfd88(0x137)]()['call']({'from':web3[_0x4dfd88(0x1cb)][_0x4dfd88(0x182)]},function(_0x2fe3b1,_0x25c4a3){var _0xacbcf2=_0x4dfd88;!_0x2fe3b1?(console[_0xacbcf2(0x153)](_0xacbcf2(0x19e),_0x25c4a3),document[_0xacbcf2(0x1a0)](_0xacbcf2(0x137))[_0xacbcf2(0x1fa)]=_0xacbcf2(0xf9)+web3[_0xacbcf2(0x1d0)][_0xacbcf2(0x1e3)](_0x25c4a3,_0xacbcf2(0x13d))):console[_0xacbcf2(0x153)](_0xacbcf2(0x179),_0x2fe3b1);});}function addZero(_0x49e92d){var _0x3ed29b=_0xba314c,_0x3b224f=_0x49e92d+_0x3ed29b(0x1f6);return _0x3b224f;}function component(_0x361808,_0x54d400){return Math['floor'](_0x361808/_0x54d400);}function TimeCountDown(_0x2d3531){var _0x21dc38=_0xba314c;console['log'](_0x21dc38(0x180)),_0x2d3531/=0x3e8,setInterval(function(){var _0x664e3d=_0x21dc38;_0x2d3531--;var _0xde6acd=component(_0x2d3531,0x18*0x3c*0x3c),_0x142830=component(_0x2d3531,0x3c*0x3c)%0x18,_0x6e0891=component(_0x2d3531,0x3c)%0x3c,_0x3b9c0d=component(_0x2d3531,0x1)%0x3c;document[_0x664e3d(0x1a0)](_0x664e3d(0x180))[_0x664e3d(0x1fa)]=_0xde6acd+_0x664e3d(0x1c7)+_0x142830+':'+_0x6e0891+':'+_0x3b9c0d;},0x3e8);}function TimeCount(_0x16b2be){var _0x6f91a8=setInterval(function(){var _0x2b7449=_0xc047,_0x4127b1=new Date()[_0x2b7449(0x22a)](),_0x3f7575=_0x16b2be-_0x4127b1,_0x519f9b=Math[_0x2b7449(0x22b)](_0x3f7575/(0x3e8*0x3c*0x3c*0x18)),_0x2fffde=Math['floor'](_0x3f7575%(0x3e8*0x3c*0x3c*0x18)/(0x3e8*0x3c*0x3c)),_0x2e9900=Math[_0x2b7449(0x22b)](_0x3f7575%(0x3e8*0x3c*0x3c)/(0x3e8*0x3c)),_0x469ff8=Math[_0x2b7449(0x22b)](_0x3f7575%(0x3e8*0x3c)/0x3e8);$(_0x2b7449(0x1bd))[_0x2b7449(0x24f)](_0x519f9b+_0x2b7449(0x1cd)),$(_0x2b7449(0x148))[_0x2b7449(0x24f)](_0x2fffde+'<span>Hours</span>'),$('#minutes')[_0x2b7449(0x24f)](_0x2e9900+_0x2b7449(0x190)),$(_0x2b7449(0x157))[_0x2b7449(0x24f)](_0x469ff8+_0x2b7449(0xfb)),_0x3f7575<0x0&&(clearInterval(_0x6f91a8),$(_0x2b7449(0x1bd))[_0x2b7449(0x24f)]('0'+_0x2b7449(0x1cd)),$(_0x2b7449(0x148))[_0x2b7449(0x24f)]('0'+_0x2b7449(0x239)),$(_0x2b7449(0x1a2))['html']('0'+_0x2b7449(0x190)),$(_0x2b7449(0x157))[_0x2b7449(0x24f)]('0'+_0x2b7449(0xfb)),$('#OverTime')[_0x2b7449(0x188)]());},0x3e8);}async function IWantChange(){await UpdateInfo();}async function IWantChangeBackup(){var _0x5ab8e2=_0xba314c;$(_0x5ab8e2(0x20e))[_0x5ab8e2(0x24f)](_0x5ab8e2(0x1ea)),console[_0x5ab8e2(0x153)](_0x5ab8e2(0x250)),ISendobj=document['getElementById'](_0x5ab8e2(0xec)),IWantobj=document[_0x5ab8e2(0x1a0)](_0x5ab8e2(0x198)),console[_0x5ab8e2(0x153)](IWantobj[_0x5ab8e2(0x19c)][IWantobj[_0x5ab8e2(0x1af)]][_0x5ab8e2(0x187)]);var _0x570f2d=ISendobj[_0x5ab8e2(0x19c)][ISendobj[_0x5ab8e2(0x1af)]][_0x5ab8e2(0x187)],_0x5efb41=IWantobj[_0x5ab8e2(0x19c)][IWantobj[_0x5ab8e2(0x1af)]]['value'];tokenOut=IWantobj[_0x5ab8e2(0x19c)][IWantobj[_0x5ab8e2(0x1af)]]['value'],console[_0x5ab8e2(0x153)](_0x5ab8e2(0x17d),tokenOut);var _0x2237fa=await new web3['eth']['Contract'](TokenSmartContractABI,tokenOut,{'from':web3['currentProvider'][_0x5ab8e2(0x182)]}),_0x1c7f07=await _0x2237fa[_0x5ab8e2(0x172)][_0x5ab8e2(0x225)]()[_0x5ab8e2(0x136)]();console[_0x5ab8e2(0x153)](_0x5ab8e2(0x1f0),_0x1c7f07);var _0x27f506=Math[_0x5ab8e2(0x164)](0xa,parseInt(_0x1c7f07));console[_0x5ab8e2(0x153)]('decimalPow:',_0x27f506);var _0x1bbbe2=await _0x2237fa[_0x5ab8e2(0x172)][_0x5ab8e2(0x1f1)](web3[_0x5ab8e2(0x1cb)]['selectedAddress'])[_0x5ab8e2(0x136)]();console[_0x5ab8e2(0x153)](_0x5ab8e2(0x106),_0x1bbbe2);var _0x4c8749=_0x1bbbe2/_0x27f506;console['log'](_0x5ab8e2(0x1fb),_0x4c8749),$(_0x5ab8e2(0x20e))[_0x5ab8e2(0x24f)](_0x5ab8e2(0xee)+_0x4c8749),await ISendInputChange();}async function ISendChange(){await UpdateInfo();}async function ISendChangeBackup(){var _0x450700=_0xba314c;$('#SendBalance')[_0x450700(0x24f)](_0x450700(0x1ea)),console[_0x450700(0x153)](_0x450700(0x100)),ISendobj=document[_0x450700(0x1a0)](_0x450700(0xec)),IWantobj=document[_0x450700(0x1a0)]('SelectIWant'),TokenInAddress=ISendobj[_0x450700(0x19c)][ISendobj[_0x450700(0x1af)]][_0x450700(0x187)],ChooseSendTokenAddress=TokenInAddress,console[_0x450700(0x153)]('you\x20select\x20token:',TokenInAddress);if(ISendobj[_0x450700(0x19c)][ISendobj[_0x450700(0x1af)]][_0x450700(0x1fa)]!=MainCoin)console[_0x450700(0x153)](_0x450700(0x26e)),await getApproveStatus(web3['currentProvider'][_0x450700(0x182)],contractAdress,TokenInAddress);else ISendobj['options'][ISendobj['selectedIndex']][_0x450700(0x1fa)]==MainCoin&&await LoadMainCoinBalance();var _0x5092b2=await new web3['eth'][(_0x450700(0x21b))](TokenSmartContractABI,TokenInAddress,{'from':web3['currentProvider']['selectedAddress']}),_0x20cae6=await _0x5092b2['methods'][_0x450700(0x225)]()[_0x450700(0x136)]();console[_0x450700(0x153)](_0x450700(0x1f0),_0x20cae6);var _0x5d04cb=Math[_0x450700(0x164)](0xa,parseInt(_0x20cae6));console['log'](_0x450700(0x152),_0x5d04cb);var _0x3fb0ef=await _0x5092b2[_0x450700(0x172)]['balanceOf'](web3['currentProvider'][_0x450700(0x182)])[_0x450700(0x136)]();LeftCoinBalance=_0x3fb0ef;var _0x2f82ce=parseFloat(document[_0x450700(0x1a0)](_0x450700(0x1d4))[_0x450700(0x187)])*_0x5d04cb,_0x378882=document['getElementById'](_0x450700(0x198))[_0x450700(0x187)];console[_0x450700(0x153)](_0x450700(0x1db),_0x378882),console[_0x450700(0x153)](_0x450700(0x106),_0x3fb0ef);var _0x3f1f20;_0x3fb0ef>0x0?_0x3f1f20=(_0x3fb0ef/_0x5d04cb)['toString']():_0x3f1f20='0',document[_0x450700(0x1a0)](_0x450700(0x1d4))[_0x450700(0x187)]=_0x3f1f20,await ISendInputChange(),await QueryAllAdapters(_0x2f82ce,TokenInAddress,_0x378882),console[_0x450700(0x153)]('TokenBalance:',_0x3f1f20),$('#SendBalance')[_0x450700(0x24f)](_0x450700(0xee)+_0x3f1f20);}async function ISendInputChange(){var _0x1919fe=_0xba314c;await UpdateInfo(),document[_0x1919fe(0x1a0)]('ISendAmount')[_0x1919fe(0x1b6)]=![];}async function UpdateInfo(){var _0x1f957a=_0xba314c;try{ISendobj=document[_0x1f957a(0x1a0)]('SelectISend'),IWantobj=document[_0x1f957a(0x1a0)]('SelectIWant'),console[_0x1f957a(0x153)](_0x1f957a(0x1c4),ISendobj[_0x1f957a(0x19c)][ISendobj[_0x1f957a(0x1af)]][_0x1f957a(0x1fa)]);if(parseFloat(document[_0x1f957a(0x1a0)](_0x1f957a(0x1d4))[_0x1f957a(0x187)])>0x0&&ISendobj[_0x1f957a(0x19c)][ISendobj[_0x1f957a(0x1af)]][_0x1f957a(0x187)]!=IWantobj[_0x1f957a(0x19c)][IWantobj[_0x1f957a(0x1af)]][_0x1f957a(0x187)]){$(_0x1f957a(0x185))[_0x1f957a(0x24f)](''),$(_0x1f957a(0x1cf))[_0x1f957a(0x24f)](_0x1f957a(0x18c)),$(_0x1f957a(0x151))[_0x1f957a(0x1d9)](_0x1f957a(0x1b6),_0x1f957a(0x1b6)),$(_0x1f957a(0x1d1))['html'](''),document[_0x1f957a(0x1a0)](_0x1f957a(0x219))[_0x1f957a(0x187)]='',$(_0x1f957a(0x14c))[_0x1f957a(0x24f)](_0x1f957a(0x1ea)),$(_0x1f957a(0x20e))[_0x1f957a(0x24f)](_0x1f957a(0x1ea)),console[_0x1f957a(0x153)](_0x1f957a(0x1a1),document[_0x1f957a(0x1a0)](_0x1f957a(0x1d4))[_0x1f957a(0x187)]),tokenIn=ISendobj[_0x1f957a(0x19c)][ISendobj[_0x1f957a(0x1af)]][_0x1f957a(0x187)],tokenOut=IWantobj[_0x1f957a(0x19c)][IWantobj['selectedIndex']]['value'];var _0x45f356=_0x1f957a(0x13f)+UseScan+_0x1f957a(0xf0)+tokenOut+_0x1f957a(0xdf)+IWantobj[_0x1f957a(0x19c)][IWantobj[_0x1f957a(0x1af)]]['innerHTML']+_0x1f957a(0x11b);$(_0x1f957a(0x1d1))[_0x1f957a(0x165)](_0x45f356),console[_0x1f957a(0x153)](_0x1f957a(0x183),tokenIn),console[_0x1f957a(0x153)]('SelectIWant:',tokenOut);let _0x48d2c7=0x1,_0x3a0126='0';var _0x2175eb=await new web3[(_0x1f957a(0x1de))]['Contract'](TokenSmartContractABI,tokenIn,{'from':web3['currentProvider']['selectedAddress']}),_0xc01dca=await _0x2175eb['methods'][_0x1f957a(0x225)]()['call']();console['log'](_0x1f957a(0x1f0),_0xc01dca);var _0x42f218=parseFloat(document[_0x1f957a(0x1a0)](_0x1f957a(0x1d4))[_0x1f957a(0x187)]),_0x55cd36=Math[_0x1f957a(0x164)](0xa,parseInt(_0xc01dca)),_0x3e0ea9=await _0x2175eb[_0x1f957a(0x172)][_0x1f957a(0x1f1)](web3[_0x1f957a(0x1cb)]['selectedAddress'])[_0x1f957a(0x136)]();_0x3e0ea9>0x0?TokenInFinalBalance=(_0x3e0ea9/_0x55cd36)['toString']():TokenInFinalBalance='0';TokenInAddress=ISendobj[_0x1f957a(0x19c)][ISendobj['selectedIndex']][_0x1f957a(0x187)],ChooseSendTokenAddress=TokenInAddress,console[_0x1f957a(0x153)]('you\x20select\x20token:',TokenInAddress);if(ISendobj['options'][ISendobj[_0x1f957a(0x1af)]][_0x1f957a(0x1fa)]!=MainCoin)console[_0x1f957a(0x153)](_0x1f957a(0x26e)),await getApproveStatus(web3[_0x1f957a(0x1cb)][_0x1f957a(0x182)],contractAdress,TokenInAddress),$(_0x1f957a(0x14c))[_0x1f957a(0x24f)]('Balance:\x20'+TokenInFinalBalance),LeftCoinBalance=TokenInFinalBalance;else{if(ISendobj['options'][ISendobj[_0x1f957a(0x1af)]][_0x1f957a(0x1fa)]==MainCoin){var _0x17aa7c=await web3['eth'][_0x1f957a(0x231)](web3[_0x1f957a(0x1cb)]['selectedAddress']),_0x55cd36=Math[_0x1f957a(0x164)](0xa,parseInt(0x12));LeftCoinBalance=_0x17aa7c/_0x55cd36,$('#SendBalance')[_0x1f957a(0x24f)]('Balance:'+LeftCoinBalance),console[_0x1f957a(0x153)]('MainCoin\x20balance:',_0x17aa7c);}}let _0xaf29a8=BigInt(_0x42f218*_0x55cd36)[_0x1f957a(0x217)](),_0x158498=await myContract[_0x1f957a(0x172)][_0x1f957a(0x25f)](_0xaf29a8,tokenIn,tokenOut,_0x48d2c7)[_0x1f957a(0x136)]();console['log'](_0x1f957a(0x1c0),tokenIn),console[_0x1f957a(0x153)](_0x1f957a(0x12a),tokenOut),console[_0x1f957a(0x153)](_0x1f957a(0x1c2),_0xaf29a8),console[_0x1f957a(0x153)](_0x1f957a(0x203),web3['currentProvider']['selectedAddress']),console[_0x1f957a(0x153)](_0x1f957a(0x20c),_0x158498),console[_0x1f957a(0x153)](_0x1f957a(0x19a),UseAdapters),$[_0x1f957a(0x235)](UseAdapters,function(_0x2f3271){var _0x1f4ff5=_0x1f957a;_0x158498[_0x1f4ff5(0x21a)][0x0]==UseAdapters[_0x2f3271]['address']&&(console[_0x1f4ff5(0x153)](_0x1f4ff5(0x22f),UseAdapters[_0x2f3271][_0x1f4ff5(0xef)]),$('#router')[_0x1f4ff5(0x24f)](UseAdapters[_0x2f3271][_0x1f4ff5(0xef)]));});var _0xfce93e=_0x158498['amounts'][0x1];console['log'](_0x1f957a(0x1f4),_0xfce93e);var _0x5f5671=await new web3[(_0x1f957a(0x1de))][(_0x1f957a(0x21b))](TokenSmartContractABI,tokenOut,{'from':web3['currentProvider'][_0x1f957a(0x182)]}),_0x64cef5=await _0x5f5671[_0x1f957a(0x172)]['decimals']()[_0x1f957a(0x136)]();console[_0x1f957a(0x153)]('TokenDecimals2:',_0x64cef5);var _0x3d7f90=Math['pow'](0xa,parseInt(_0x64cef5));console['log'](_0x1f957a(0x176),_0x3d7f90);var _0x45a1fb=Number(_0xfce93e/_0x3d7f90)[_0x1f957a(0x122)](0x12);let _0x42a684=_0x45a1fb;document[_0x1f957a(0x1a0)]('IReciveAmount')[_0x1f957a(0x187)]=_0x42a684;var _0x2edade=await _0x5f5671[_0x1f957a(0x172)]['balanceOf'](web3[_0x1f957a(0x1cb)][_0x1f957a(0x182)])[_0x1f957a(0x136)]();console[_0x1f957a(0x153)](_0x1f957a(0x16e),_0x2edade);var _0x18e739;_0x2edade>0x0?_0x18e739=(_0x2edade/_0x3d7f90)['toString']():_0x18e739='0';console[_0x1f957a(0x153)](_0x1f957a(0x14a),_0x18e739);if(IWantobj[_0x1f957a(0x19c)][IWantobj[_0x1f957a(0x1af)]][_0x1f957a(0x1fa)]!=MainCoin)console[_0x1f957a(0x153)](_0x1f957a(0x26e)),$('#RecieveBalance')[_0x1f957a(0x24f)](_0x1f957a(0xee)+_0x18e739);else{if(IWantobj[_0x1f957a(0x19c)][IWantobj[_0x1f957a(0x1af)]]['innerHTML']==MainCoin){var _0x17aa7c=await web3[_0x1f957a(0x1de)]['getBalance'](web3[_0x1f957a(0x1cb)][_0x1f957a(0x182)]),_0x55cd36=Math['pow'](0xa,parseInt(0x12)),_0x3a7017=_0x17aa7c/_0x55cd36;$(_0x1f957a(0x20e))[_0x1f957a(0x24f)](_0x1f957a(0x234)+_0x3a7017),console['log'](_0x1f957a(0x254),_0x17aa7c);}}await QueryAllAdapters(_0x64cef5,_0xaf29a8,tokenIn,tokenOut),console['log']('\x20');}else $(_0x1f957a(0x1cf))['html']('Balance\x20not\x20enough\x20or\x20select\x20same\x20coin'),console[_0x1f957a(0x153)](_0x1f957a(0xf4));}catch(_0x2173ca){$(_0x1f957a(0x151))[_0x1f957a(0x1c1)](_0x1f957a(0x1b6));}$(_0x1f957a(0x1cf))['html'](''),$('#SwapButton')['removeAttr'](_0x1f957a(0x1b6));}async function ChangeNetwork(_0x3d0d54){var _0x5e4e5c=_0xba314c,_0x48da78,_0xc8419d=document['getElementById'](_0x5e4e5c(0x1ce));console[_0x5e4e5c(0x153)](_0x3d0d54);if(_0x3d0d54=='Avalanche')_0xc8419d[_0x5e4e5c(0x1fa)]=_0x5e4e5c(0xe0),_0x48da78=0x1;else{if(_0x3d0d54=='Polygon')_0xc8419d['innerHTML']=_0x5e4e5c(0x144),_0x48da78=0x89;else{if(_0x3d0d54==_0x5e4e5c(0x145))_0xc8419d['innerHTML']='Fantom',_0x48da78=0xfa;else{if(_0x3d0d54==_0x5e4e5c(0x1bb))_0xc8419d[_0x5e4e5c(0x1fa)]=_0x5e4e5c(0x1bb),_0x48da78=0x38;else _0x3d0d54==_0x5e4e5c(0x146)?(_0xc8419d[_0x5e4e5c(0x1fa)]=_0x5e4e5c(0x146),_0x48da78=0x80):$(_0x5e4e5c(0x1cf))['html'](_0x5e4e5c(0x177));}}}detectEthereumNetwork(_0x48da78);}async function detectEthereumNetwork(_0x2358d9){var _0x5a0bd2=_0xba314c,_0x5b06ae=document['getElementById'](_0x5a0bd2(0x1ed)),_0x137bbf={'chainName':_0x5a0bd2(0x184),'chainxName':_0x5a0bd2(0xe0),'symbol':_0x5a0bd2(0x200),'rpcUrls':_0x5a0bd2(0xe5),'blockExplorerUrls':'https://cchain.explorer.avax.network/'},_0x3c9ddc={'chainName':_0x5a0bd2(0x126),'chainxName':'BNB','symbol':'BNB','rpcUrls':_0x5a0bd2(0x123),'blockExplorerUrls':_0x5a0bd2(0x168)},_0x5cb514={'chainName':'Matic(Polygon)\x20Mainnet','chainxName':_0x5a0bd2(0x131),'symbol':_0x5a0bd2(0x195),'rpcUrls':_0x5a0bd2(0x10e),'blockExplorerUrls':'https://polygonscan.com'},_0x260e9b={'chainName':_0x5a0bd2(0x258),'chainxName':'HT','symbol':'HT','rpcUrls':'https://http-mainnet.hecochain.com','blockExplorerUrls':_0x5a0bd2(0x127)},_0x2a7571={'chainName':'Fantom\x20Opera','chainxName':_0x5a0bd2(0x1ab),'symbol':_0x5a0bd2(0x1ab),'rpcUrls':_0x5a0bd2(0x132),'blockExplorerUrls':_0x5a0bd2(0x26f)},_0x148768=_0x2358d9,_0x4fabd0=await web3['eth'][_0x5a0bd2(0x25c)][_0x5a0bd2(0x107)]();console[_0x5a0bd2(0x153)](_0x5a0bd2(0x149),_0x4fabd0);var _0x1001d6;if(_0x148768==0x38)_0x1001d6=_0x3c9ddc;else{if(_0x148768==0x80)_0x1001d6=_0x260e9b;else{if(_0x148768==0x89)_0x1001d6=_0x5cb514;else{if(_0x148768==0xfa)_0x1001d6=_0x2a7571;else _0x148768==0xa86a&&(_0x1001d6=_0x137bbf);}}}if(_0x4fabd0==_0x2358d9&&_0x4fabd0!=0x13881)return console[_0x5a0bd2(0x153)]('current\x20network\x20equl\x20Select\x20network\x20id.\x20does\x27nt\x20need\x20switch\x20metamask'),!![];try{$(_0x5a0bd2(0x1cf))[_0x5a0bd2(0x24f)](_0x5a0bd2(0x22e)),await window[_0x5a0bd2(0xf1)][_0x5a0bd2(0x264)]({'method':_0x5a0bd2(0x18e),'params':[{'chainId':'0x'+decimalToHexString(parseInt(_0x2358d9))}]}),window[_0x5a0bd2(0x1e0)][_0x5a0bd2(0x128)]();}catch(_0x5885b9){console['log']('error.code',_0x5885b9[_0x5a0bd2(0x125)]);if(_0x5885b9[_0x5a0bd2(0x125)]==0x1326)try{return console['log']('not\x20found\x20network,now\x20add\x20it\x20.',_0x5885b9[_0x5a0bd2(0x125)]),await window[_0x5a0bd2(0xf1)][_0x5a0bd2(0x264)]({'method':'wallet_addEthereumChain','params':[{'chainId':'0x'+decimalToHexString(parseInt(_0x2358d9)),'chainName':_0x1001d6[_0x5a0bd2(0x199)],'nativeCurrency':{'name':_0x1001d6['chainxName'],'symbol':_0x1001d6['symbol'],'decimals':0x12},'rpcUrls':[_0x1001d6[_0x5a0bd2(0x135)]],'blockExplorerUrls':[_0x1001d6[_0x5a0bd2(0x201)]]}]}),![],window[_0x5a0bd2(0x1e0)][_0x5a0bd2(0x128)]();}catch(_0x3b6af7){if(_0x3b6af7[_0x5a0bd2(0x125)]==0xfa1)return console[_0x5a0bd2(0x153)](_0x5a0bd2(0x19f),_0x3b6af7[_0x5a0bd2(0x121)]),$(_0x5a0bd2(0x1f2))[_0x5a0bd2(0x240)](),$(_0x5a0bd2(0x1cf))[_0x5a0bd2(0x24f)](''),![];}else{if(_0x5885b9[_0x5a0bd2(0x125)]==0xfa1)return console[_0x5a0bd2(0x153)](_0x5a0bd2(0x16b),_0x5885b9[_0x5a0bd2(0x121)]),$(_0x5a0bd2(0x1f2))[_0x5a0bd2(0x240)](),$(_0x5a0bd2(0x1cf))[_0x5a0bd2(0x24f)](''),![];}}$(_0x5a0bd2(0x1cf))[_0x5a0bd2(0x24f)]('');}async function Swap(){var _0x5afc71=_0xba314c;ISendobj=document['getElementById']('SelectISend'),IWantobj=document[_0x5afc71(0x1a0)](_0x5afc71(0x198));if(ISendobj[_0x5afc71(0x19c)][ISendobj[_0x5afc71(0x1af)]][_0x5afc71(0x187)]==IWantobj[_0x5afc71(0x19c)][IWantobj[_0x5afc71(0x1af)]][_0x5afc71(0x187)]||ISendobj['options'][ISendobj[_0x5afc71(0x1af)]][_0x5afc71(0x187)]==''){console[_0x5afc71(0x153)](_0x5afc71(0xde)),$(_0x5afc71(0x1cf))['html'](_0x5afc71(0xde));return;}var _0x5ca9bc=await checkStock();if(_0x5ca9bc==![]){console['log'](_0x5afc71(0x1fe));return;}var _0x23db3d=await detectEthereumNetwork(ISendobj[_0x5afc71(0x19c)][ISendobj['selectedIndex']][_0x5afc71(0x187)]);console['log']('NetworkOK',_0x23db3d);if(_0x23db3d){console[_0x5afc71(0x153)](_0x5afc71(0x23b),contractAdress);var _0x4a1f79=await ChooseNetwork(ISendobj[_0x5afc71(0x19c)][ISendobj[_0x5afc71(0x1af)]][_0x5afc71(0x187)]);console[_0x5afc71(0x153)](_0x5afc71(0x11a),contractAdress),$(_0x5afc71(0x1f2))[_0x5afc71(0x188)]();var _0x931bd=await InitOrder(String(IWantobj[_0x5afc71(0x19c)][IWantobj[_0x5afc71(0x1af)]][_0x5afc71(0x187)]),String(document[_0x5afc71(0x1a0)](_0x5afc71(0x19d))[_0x5afc71(0x187)]));}}function _0x4919(){var _0x4a235a=['27nOGSUb','after\x20choose\x20network,contract\x20Adress\x20is\x20:','\x20</a>','UseAdapters*****\x20','41386kQyDAW','Approval\x20hash:','#PolygonTokenBalance','RecieveAmount:','message','toFixed','https://bsc-dataseed1.binance.org/','0x520827a2897587FcF6c30A9C0e549ec5216148D6','code','Binance\x20Smart\x20Chain\x20Mainnet','https://hecoinfo.com','reload','%</span></p>','tokenOut:','<div\x20class=\x22media\x20align-items-center\x20p-0\x22>','EndTime','</div></div></div></div>','includes','#steemPrice','_IniterAddress:','Matic','https://rpcapi.fantom.network','24FHDdMW','amounts','rpcUrls','call','RewardPool','0xBc4A22F4A76367a4F503BCDfB2c6ee6b115537a7','#PriceSuggest','Binance\x20USDT\x20Stock\x20Not\x20enough,Max:','0x04068da6c83afcfa0e13ba15a6696662335d5b75','</td>\x20','ether','web3','<a\x20href=\x27','TempSendValue:','\x22>\x20','CCCC','matic-network','Polygon','Fantom','Heco','tx/','#hours','networkId.','FinalBalance2:','Approval\x20successfull!','#SendBalance','UseTokens\x20:\x20','initiate\x20can\x20not\x20connect\x20to\x20the\x20smart\x20contract\x20','SelectISendIMG','This\x20is\x20the\x20BSC\x20\x20network.','#SwapButton','decimalPow:','log','\x20width=\x2225\x22\x20\x20height=\x2225\x22\x20','approve','_NetworkIDIniterWant:','#seconds','Guess\x20can\x20not\x20connect\x20to\x20the\x20smart\x20contract\x20or\x20less\x20than\x20100','0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83','balance:','Metamask\x20detected!','https://bscscan.com/address/0x55d398326f99059ff775485246999027b3197955','JsonResult:','Our\x20Binance\x20USDT\x20Stock:','BinanceTokens:','Polygon\x20\x20Token\x20balance:','symbol','https://bsc-dataseed1.binance.org','</div></h3>','pow','append','#ethPrice','This\x20is\x20the\x20Polygon\x20\x20network.','https://bscscan.com/','replace','click','User\x20reject\x20switch\x20network.','Tips','https://api.coingecko.com/api/v3/simple/price?ids=matic-network%2Cbnb%2Cethereum%2Cbinancecoin&vs_currencies=usd','TokenAmount2:','adaptersCount','EndTime:','<tr\x20class=\x22bg-dark\x22>','methods','_AmountIniterWant:','queryAdapter','2006653DZrBog','AddZero2:','Current\x20Network\x20not\x20support\x20,Add\x20or\x20change\x20network\x20now\x20.\x20','Metamask\x20not\x20detected','RewardPool\x20can\x20not\x20connect\x20to\x20the\x20smart\x20contract','web3GasPrice:\x20','length','2330792EPScvs','you\x20select\x20tokenOut:','amountIn:','start','TimeCountDown','Approval\x20receipt:','selectedAddress','SelectISend:','Avalanche\x20Mainnet','#RouterTable','tot','value','show','getPastEvents','#FantomTokenBalance','0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff','Calculating...','</td><td\x20id=\x22initiator\x22>','wallet_switchEthereumChain','This\x20is\x20the\x20Polygon\x20network.','<span>Minutes</span>','https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=50&page=1&sparkline=false&price_change_percentage=24h','This\x20is\x20an\x20unknown\x20network.','_TransferAmount:','</span>\x20<span\x20class=\x22text-info\x22>\x20$','MATIC','https://ftmscan.com/token/0x04068da6c83afcfa0e13ba15a6696662335d5b75','NetworkIDIniterWant','SelectIWant','chainName','Use\x20Adapter\x20:\x20','catch','options','ISendInput','RewardPool:','User\x20reject\x20.','getElementById','Send\x20amount:','#minutes','<div\x20class=\x22box\x20box-body\x20pull-up\x22>','green','adapterAddress:','getApproveStatus:','10580YYOQxj','Amount\x20Must\x20greater\x20Than\x202','tokens','MainCoin\x20is\x20','FTM','color','This\x20is\x20the\x20deprecated\x20Morden\x20test\x20network.','getGasPrice','selectedIndex','accountsChanges','suggest\x20price:','SwapNow\x20amountIn:','MaticPrice:','</td></tr>','</div></div>','disabled','images/exchange/','AmountIniterWant','have\x20not\x20approved,please\x20approve\x20first!','market_cap_change_percentage_24h','Binance','neo','#days','AdapterResult:','orderID','tokenIn:','removeAttr','UpdateInfo\x20amountIn:','usd','select......','_tokenIn\x20','</th><td>','\x20days,\x20','send','\x20</tr>','</div><div\x20class=\x22text-end\x22>','currentProvider','Transaction\x20Hash:\x20\x20','<span>Days</span>','SelectNetworkDropdown','#Tips','utils','#UserChooseCoinAddress','0x066fE67a495642f2395dba66e9F8925D448b2CD2','src','ISendAmount','<div\x20class=\x27alert\x20alert-warning\x27\x20role=\x27alert\x27>\x20<a\x20\x20\x20href=\x27https://metamask.io/\x27>Metamask\x20not\x20install,Click\x20to\x20Install\x20Metamask\x20First</a></div>','SwapNow\x20web3.currentProvider.selectedAddress:','#approveThisButton','_value','attr','_IniterSwapID:','tokenOutAddress:','ISendValue:','Not\x20in\x20range,Exit','eth','.......','location','250','img/','fromWei','https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=20&page=1&sparkline=false&price_change_percentage=24h','TokenDecimals','This\x20is\x20the\x20Fantom\x20\x20network.','ADAPTERS','binancecoin','swapNoSplit\x20finish','Loading...','\x20<th>Accept</th>\x20\x20','0xc2132d05d31c914a87c6611c10748aeb04b58e8f','ChooseNetworkSelect','Polygon\x20USDT\x20Stock\x20Not\x20enough,Max:','https://ftmscan.com/','TokenDecimals:','balanceOf','#loader1','FantomTokens:','IRecive:','722574tjAlMc','000000000000000000','This\x20is\x20the\x20ropsten\x20test\x20network.','BTCPrice','#balanceOf','innerHTML','TokenBalance:','hash:','_ContractNetworkID','Stock\x20not\x20enough','createElement','AVAX','blockExplorerUrls','<button\x20onclick=\x22TransferToIniter(\x20','ISendInputChange\x20web3.currentProvider.selectedAddress:','<h3><div\x20style=\x22color:green\x22>','receipt','path','0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c','BNBPrice:','0xc5cB0c289801F0B1B74C4D433Ac5fD5610aB50A0','0x55d398326f99059ff775485246999027b3197955','_tokenOut\x20','findBestPathResult:','\x20<th>You\x20get</th>\x20\x20','#RecieveBalance','123','SelectIWant:','accountsChanged','#transactionHashLabel','<tr><td\x20id=\x22NetworkIDIniterWant\x22\x20>','</td><td>','substring','allEvents','toString','transactionHash','IReciveAmount','adapters','Contract','https://rpc-mainnet.maticvigil.com','enable','<div>','json','.png','This\x20is\x20the\x20ThunderCore\x20\x20network.','</td><td\x20id=\x22PayAmount\x22>','1066255WVJNKL','#iotaPrice','decimals','This\x20is\x20Polygon\x20mainnet','#bitcoinPrice','#CurrentAddress','Approval\x20failed!','getTime','floor','MainCoin\x20balance:','This\x20is\x20the\x20BSC\x20test\x20network.','Network\x20Is\x20wrong,Add\x20or\x20Switch\x20now','UseAdapters\x20','findBestPathResult.amounts[0]:','getBalance','</td><td\x20id=\x22NeedAmount\x22>','My\x20','Balance:','each','User\x20denied\x20transaction\x20signature','HecoTokens:','#EventTable','<span>Hours</span>','images/coins/','Network\x20is\x20OK,now\x20contract\x20address\x20is\x20:','price','current_price','CurrentNetworkIcon','IWantValue:','hide','addEventListener','<div\x20class=\x22col-12\x20col-md-6\x20col-lg-4\x22>','FetchURL:','PolygonTokens:','Stock\x20Not\x20enough','137','_IniterNetwrokID:','HttpProvider','json:','\x20<th>You\x20send</th>\x20','FindPath\x20web3.currentProvider.selectedAddress:','white','0x57c90b1C343624C224Bc6Edc4841A005E00f350b','keyup','html','IWantChange\x20','call\x20SwapNoSplit','Balance\x20not\x20enough\x20or\x20select\x20same\x20coin','<table\x20class=table>\x20\x20<tr>\x20\x20\x20','right\x20MainCoin\x20balance:','call\x20SwapNoSplitFromMainCoin','SendToken:','networkChanged','Huobi\x20ECO\x20Chain\x20Mainnet','48aAFugT','0xA324823413cd1C968a5B725787828BE0a13Ded36','gasLimit:\x20','net','This\x20is\x20the\x20huobi\x20network.','Bitcoin\x20Current\x20Price:\x20$','findBestPath','This\x20is\x20Binance\x20mainnet','Current\x20network\x20:\x20','<div\x20class=\x22flexbox\x20align-items-center\x20mt-25\x22>','returnValues','request','<th>Initer\x20Want</th>\x20','#ChangeSwapButton','SendAmount:','</span></p>','Transaction\x20Hash:','Fantom\x20USDT\x20Stock\x20Not\x20enough,Max:','then','<a\x20href=','Change\x20Swap','not\x20MainCoin','https://ftmscan.com','ShowAllOrders','appendChild','<img\x20width=\x2225\x22\x20height=\x2225\x22\x20src=\x22','*Require\x20different\x20Network','\x27\x20target=\x27_blank\x27>\x20','Avalanche','</tr>','#tickPlay','<p\x20class=\x22no-margin\x22>\x20<span\x20class=\x22text-gray\x22>','\x22\x20target=\x22_blank\x22\x20>','https://api.avax.network/ext/bc/C/rpc','initiator','This\x20is\x20the\x20kovan\x20\x20network.','This\x20is\x20mainnet','adapterName:','toLowerCase','initiate\x20can\x20not\x20connect\x20to\x20the\x20smart\x20contract\x20or\x20less\x20than\x20100','SelectISend','images/network/binance.png','Balance:\x20','name','address/','ethereum','TransferToIniter\x20finish','</td>\x20\x20','Input\x20not\x20>\x200\x20,\x20or\x20same\x20coin\x20selected.','This\x20is\x20avalanche\x20mainnet','_PriceArray\x20:\x20','providers','Use\x20contract','Reward\x20coins\x20Pool:','init\x20order\x20contractAdress:','<span>Seconds</span>','IsMetamask','#BinanceTokenBalance','EndTime\x20can\x20not\x20connect\x20to\x20the\x20smart\x20contract','https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=30&page=1&sparkline=false&price_change_percentage=24h','ISendChange\x20','once','images/coins/bitcoin.png','options:','receipt:','10oEhZzx','TokenAmount:','getId','\x20<th>Ratio</th>\x20\x20','This\x20is\x20heco\x20mainnet','address','\x20)\x22>Fill</button>','latest','This\x20is\x20the\x20Binance\x20\x20network.','https://rpc-mainnet.matic.network','000','<tr><td>','7gIgAaL','style','40863eVTPdr','transferToInitUser','https://avascan.info/blockchain/c/','error','_owner','IWantInput'];_0x4919=function(){return _0x4a235a;};return _0x4919();}async function ChooseNetwork(_0x25cf2a){var _0x212d11=_0xba314c;switch(_0x25cf2a){case'1':console['log'](_0x212d11(0xe8));break;case'2':console['log'](_0x212d11(0x1ad));break;case'3':console['log']('This\x20is\x20the\x20ropsten\x20test\x20network.'),TokenContractAddress=RopstenTokenAddress,contractAdress=RopstenAddress;break;case'42':console[_0x212d11(0x153)](_0x212d11(0xe7)),TokenContractAddress=KovanTokenAddress,contractAdress=KovanAddress;break;case'56':contractAdress=BinanceContractAddress,TokenContractAddress=binanceTokenAddress,console[_0x212d11(0x153)](_0x212d11(0x150));break;case'97':contractAdress=BinanceTestContractAddress,console[_0x212d11(0x153)](_0x212d11(0x22d));break;case _0x212d11(0x246):contractAdress=PolygonContractAddress,TokenContractAddress=polygonTokenAddress,console[_0x212d11(0x153)](_0x212d11(0x18f));break;case _0x212d11(0x1e1):contractAdress=FantomContractAddress,TokenContractAddress=fantomTokenAddress,console[_0x212d11(0x153)]('This\x20is\x20the\x20Fantom\x20network.');break;default:console[_0x212d11(0x153)](_0x212d11(0x192));return![];}}function decimalToHexString(_0x81f70b){var _0x2547f7=_0xba314c;return _0x81f70b<0x0&&(_0x81f70b=0xffffffff+_0x81f70b+0x1),_0x81f70b[_0x2547f7(0x217)](0x10)['toUpperCase']();}async function toPlainString(_0x14e002){var _0x19bcd9=_0xba314c;return(''+ +_0x14e002)[_0x19bcd9(0x169)](/(-?)(\d*)\.?(\d*)e([+-]\d+)/,function(_0x1e4a43,_0x44a6c2,_0x69b151,_0x4096a3,_0x2c2254){return _0x2c2254<0x0?_0x44a6c2+'0.'+Array(0x1-_0x2c2254-_0x69b151['length'])['join'](0x0)+_0x69b151+_0x4096a3:_0x44a6c2+_0x69b151+_0x4096a3+Array(_0x2c2254-_0x4096a3['length']+0x1)['join'](0x0);});}async function QueryAllAdapters(_0x453ee0,_0x37d1c3,_0x4932ee,_0xae4212){var _0x45183a=_0xba314c;console[_0x45183a(0x153)](_0x45183a(0x267),_0x37d1c3),console['log'](_0x45183a(0x256),_0x4932ee),console[_0x45183a(0x153)]('RecieveToken:',_0xae4212);var _0x574be2=Math[_0x45183a(0x164)](0xa,parseInt(_0x453ee0)),_0x59f70c;let _0x253405=[],_0x4f3c8b=await myContract[_0x45183a(0x172)][_0x45183a(0x16f)]()[_0x45183a(0x136)]();for(let _0x3d34d6=0x0;_0x3d34d6<_0x4f3c8b;_0x3d34d6++){let _0x388c27=0x0,_0x290627=await myContract[_0x45183a(0x172)][_0x45183a(0x174)](_0x37d1c3['toString'](),_0x4932ee[_0x45183a(0x217)](),_0xae4212[_0x45183a(0x217)](),_0x3d34d6)[_0x45183a(0x136)](),_0x1418d4=await myContract['methods'][_0x45183a(0x1e7)](_0x3d34d6)[_0x45183a(0x136)]();console[_0x45183a(0x153)](_0x45183a(0x1a5),_0x1418d4),console[_0x45183a(0x153)](_0x45183a(0x1be),_0x290627);var _0x19b877=await toPlainString(_0x290627/_0x574be2);_0x290627>0x0?(_0x59f70c=await toPlainString(_0x290627/_0x574be2),console[_0x45183a(0x153)](_0x45183a(0x120),_0x19b877)):_0x59f70c='0';var _0x22eb3d,_0x5047ff,_0x4d92c7;$[_0x45183a(0x235)](UseAdapters,function(_0x524db8){var _0x5f5dbb=_0x45183a;if(_0x1418d4['toLowerCase']()==UseAdapters[_0x524db8][_0x5f5dbb(0x10a)][_0x5f5dbb(0xea)]()){_0x22eb3d=UseAdapters[_0x524db8]['name'],console['log'](_0x5f5dbb(0x11c),UseAdapters[_0x524db8]['name']);return;}}),$[_0x45183a(0x235)](UseTokens,function(_0x2c8d32){var _0x3d04be=_0x45183a;if(_0x4932ee==UseTokens[_0x2c8d32]['address']){_0x5047ff=UseTokens[_0x2c8d32][_0x3d04be(0x161)],console[_0x3d04be(0x153)](_0x3d04be(0x1c5),UseTokens[_0x2c8d32][_0x3d04be(0x161)]);return;}}),$[_0x45183a(0x235)](UseTokens,function(_0x3d8085){var _0x5dcbd4=_0x45183a;if(_0xae4212==UseTokens[_0x3d8085][_0x5dcbd4(0x10a)]){_0x4d92c7=UseTokens[_0x3d8085][_0x5dcbd4(0x161)],console['log'](_0x5dcbd4(0x20b),UseTokens[_0x3d8085]['symbol']);return;}});var _0x4613c=_0x5047ff['toString']()+'/'+_0x4d92c7[_0x45183a(0x217)]();console[_0x45183a(0x153)](_0x45183a(0xe9),_0x22eb3d),_0x253405['push']([_0x22eb3d,_0x4613c,_0x59f70c]);}_0x253405['sort'](function(_0x23ac76,_0x29e30f){return _0x29e30f[0x2]-_0x23ac76[0x2];}),console['log'](_0x45183a(0x103),_0x253405);let _0x1a60b4=await ShowPrices(_0x253405);}async function checkStock(){var _0x4839cb=_0xba314c;if(document['getElementById'](_0x4839cb(0x198))[_0x4839cb(0x187)]=='56'&&parseInt(document[_0x4839cb(0x1a0)](_0x4839cb(0x118))['value'])>binanceLimit)return $(_0x4839cb(0x1cf))[_0x4839cb(0x24f)](_0x4839cb(0x13a)+binanceLimit),console[_0x4839cb(0x153)](_0x4839cb(0x245)),![];else{if(document[_0x4839cb(0x1a0)]('SelectIWant')[_0x4839cb(0x187)]==_0x4839cb(0x246)&&parseInt(document[_0x4839cb(0x1a0)](_0x4839cb(0x118))[_0x4839cb(0x187)])>polygonLimit)return $(_0x4839cb(0x1cf))[_0x4839cb(0x24f)](_0x4839cb(0x1ee)+polygonLimit),console['log']('Stock\x20Not\x20enough'),![];else return document[_0x4839cb(0x1a0)]('SelectIWant')[_0x4839cb(0x187)]==_0x4839cb(0x1e1)&&parseInt(document[_0x4839cb(0x1a0)]('IWantInput')['value'])>fantomLimit?($('#Tips')[_0x4839cb(0x24f)](_0x4839cb(0x26a)+fantomLimit),console[_0x4839cb(0x153)](_0x4839cb(0x245)),![]):($('#Tips')[_0x4839cb(0x24f)](''),!![]);}}async function approveThis(_0x51a99c,_0xc6a297){var _0x316389=_0xba314c;$(_0x316389(0x1f2))[_0x316389(0x188)](),TokenContract=await new web3[(_0x316389(0x1de))]['Contract'](TokenSmartContractABI,_0xc6a297,{'from':web3[_0x316389(0x1cb)]['selectedAddress']});const _0x35035c=await web3['eth'][_0x316389(0x1ae)]();var _0x15a30a=0x30d40;console[_0x316389(0x153)](_0x316389(0x17a)+_0x35035c),console['log'](_0x316389(0x25b)+_0x15a30a);const _0x1ab91d=await TokenContract[_0x316389(0x172)][_0x316389(0x155)](_0x51a99c,_0x316389(0x18b))[_0x316389(0x1c8)]({'from':web3[_0x316389(0x1cb)][_0x316389(0x182)],'gasPrice':_0x35035c},function(_0x6c7ddb,_0x13d7d1){var _0x206551=_0x316389;!_0x6c7ddb?console[_0x206551(0x153)](_0x206551(0x14b)):($(_0x206551(0x1f2))['hide'](),console['log'](_0x206551(0x229)));})[_0x316389(0x101)](_0x316389(0x218),function(_0x4dd1bb){var _0x520514=_0x316389;console[_0x520514(0x153)](_0x520514(0x11e),_0x4dd1bb);})['once'](_0x316389(0x205),function(_0x7642e3){var _0x1fa399=_0x316389;console[_0x1fa399(0x153)](_0x1fa399(0x181),_0x7642e3),$(_0x1fa399(0x1d7))[_0x1fa399(0x240)](),$(_0x1fa399(0x151))[_0x1fa399(0x188)](),$(_0x1fa399(0x1f2))[_0x1fa399(0x240)]();});}async function getApproveStatus(_0x56bda0,_0x487ba1,_0x19df7b){var _0x3ef334=_0xba314c;TokenContract=await new web3['eth'][(_0x3ef334(0x21b))](TokenSmartContractABI,_0x19df7b,{'from':web3[_0x3ef334(0x1cb)][_0x3ef334(0x182)]}),await TokenContract[_0x3ef334(0x172)]['allowance'](_0x56bda0,_0x487ba1)[_0x3ef334(0x136)]({'from':web3['currentProvider'][_0x3ef334(0x182)]},function(_0xc8fa36,_0x5d015b){var _0x349a16=_0x3ef334;!_0xc8fa36&&(console['log'](_0x349a16(0x1a6),_0x5d015b),_0x5d015b>0x0?($(_0x349a16(0x1d7))[_0x349a16(0x240)](),$(_0x349a16(0x151))[_0x349a16(0x188)](),console[_0x349a16(0x153)]('Already\x20approved!')):($('#approveThisButton')['show'](),$(_0x349a16(0x151))[_0x349a16(0x240)](),console['log'](_0x349a16(0x1b9))));});}async function GetTokenBlance(){var _0x25b600=_0xba314c;$(_0x25b600(0xfd))[_0x25b600(0x24f)]('Loading...'),$(_0x25b600(0x11f))[_0x25b600(0x24f)](_0x25b600(0x1ea)),$(_0x25b600(0x18a))[_0x25b600(0x24f)](_0x25b600(0x1ea));const _0x44bb3c='https://data-seed-prebsc-1-s1.binance.org:8545',_0x453f96=_0x25b600(0x162),_0x1fa5e9=_0x25b600(0x21c),_0x11745c=_0x25b600(0x132),_0x5170c2=[{'constant':!![],'inputs':[{'name':_0x25b600(0x117),'type':'address'}],'name':_0x25b600(0x1f1),'outputs':[{'name':'balance','type':'uint256'}],'type':'function'}];var _0x50025e=new Web3(new Web3[(_0x25b600(0xf7))][(_0x25b600(0x248))](_0x1fa5e9));const _0x498b4f=await new _0x50025e[(_0x25b600(0x1de))][(_0x25b600(0x21b))](_0x5170c2,polygonTokenAddress,{'from':web3[_0x25b600(0x1cb)][_0x25b600(0x182)]}),_0x8d1b8b=await _0x498b4f[_0x25b600(0x172)]['balanceOf'](PolygonContractAddress)[_0x25b600(0x136)]();var _0x553ee7=new Web3(new Web3[(_0x25b600(0xf7))]['HttpProvider'](_0x453f96));const _0x1ccd83=await new _0x553ee7[(_0x25b600(0x1de))]['Contract'](_0x5170c2,binanceTokenAddress,{'from':web3[_0x25b600(0x1cb)][_0x25b600(0x182)]}),_0x43725c=await _0x1ccd83[_0x25b600(0x172)][_0x25b600(0x1f1)](BinanceContractAddress)[_0x25b600(0x136)]();var _0x1896cf=new Web3(new Web3[(_0x25b600(0xf7))][(_0x25b600(0x248))](_0x11745c));const _0x2f4a17=await new _0x1896cf[(_0x25b600(0x1de))][(_0x25b600(0x21b))](_0x5170c2,fantomTokenAddress,{'from':web3[_0x25b600(0x1cb)][_0x25b600(0x182)]}),_0x291ecd=await _0x2f4a17[_0x25b600(0x172)][_0x25b600(0x1f1)](FantomContractAddress)[_0x25b600(0x136)]();console['log']('Binance\x20\x20Token\x20balance:',_0x43725c),console[_0x25b600(0x153)](_0x25b600(0x160),_0x8d1b8b),console[_0x25b600(0x153)]('Fantom\x20\x20Token\x20balance:',_0x291ecd);var _0x444fcc=Math[_0x25b600(0x164)](0xa,parseInt(0x6)),_0x2706cd=Math['pow'](0xa,parseInt(0x12)),_0x3254aa=_0x43725c/_0x2706cd,_0x302993=_0x8d1b8b/_0x444fcc,_0x4fcf96=_0x291ecd/_0x444fcc;binanceLimit=parseInt(_0x3254aa[_0x25b600(0x122)](0x0))-0x1,polygonLimit=parseInt(_0x302993['toFixed'](0x0))-0x1,fantomLimit=parseInt(_0x4fcf96[_0x25b600(0x122)](0x0))-0x1,$('#BinanceTokenBalance')[_0x25b600(0x24f)](_0x25b600(0x15e)+_0x25b600(0x204)+(_0x3254aa-0x1)[_0x25b600(0x122)](0x0)+_0x25b600(0x163)),$('#PolygonTokenBalance')[_0x25b600(0x24f)]('Our\x20Polygon\x20USDT\x20Stock:'+_0x25b600(0x204)+(_0x302993-0x1)['toFixed'](0x0)+_0x25b600(0x163)),$(_0x25b600(0x18a))['html']('Our\x20Fantom\x20USDT\x20Stock:'+_0x25b600(0x204)+(_0x4fcf96-0x1)[_0x25b600(0x122)](0x0)+'</div></h3>');}function _0xc047(_0x58d684,_0xfe1ce9){var _0x4919e7=_0x4919();return _0xc047=function(_0xc04779,_0x225866){_0xc04779=_0xc04779-0xdc;var _0x5cc05b=_0x4919e7[_0xc04779];return _0x5cc05b;},_0xc047(_0x58d684,_0xfe1ce9);}async function balanceOf(_0x30a9b,_0x41bbfc){var _0x1c12d5=_0xba314c;$(_0x1c12d5(0x1f9))[_0x1c12d5(0x24f)](_0x1c12d5(0x1ea)),await _0x41bbfc[_0x1c12d5(0x172)]['balanceOf'](_0x30a9b)[_0x1c12d5(0x136)]({'from':web3[_0x1c12d5(0x1cb)]['selectedAddress']},function(_0x46ce5f,_0x7d8c23){var _0x40fe07=_0x1c12d5;!_0x46ce5f?(console[_0x40fe07(0x153)]('balanceOf:',_0x7d8c23),myContract[_0x40fe07(0x172)][_0x40fe07(0x1e5)]()['call'](function(_0x206704,_0x3a437b){var _0x36155e=_0x40fe07,_0x30033b=parseInt(_0x7d8c23),_0x43749b=Math['pow'](0xa,parseInt(_0x3a437b)),_0xddd5d8=(_0x30033b/_0x43749b)['toFixed'](0x2),_0x41235f=_0x36155e(0x15c);if(document[_0x36155e(0x1a0)]('SelectISend')[_0x36155e(0x187)]==0x38)_0x41235f='https://bscscan.com/address/0x55d398326f99059ff775485246999027b3197955';else{if(document[_0x36155e(0x1a0)](_0x36155e(0xec))[_0x36155e(0x187)]==0x89)_0x41235f='https://polygonscan.com/address/0xc2132d05d31c914a87c6611c10748aeb04b58e8f';else document[_0x36155e(0x1a0)](_0x36155e(0xec))[_0x36155e(0x187)]==0xfa&&(_0x41235f=_0x36155e(0x196));}$('#balanceOf')[_0x36155e(0x24f)](_0x36155e(0x233)+_0x36155e(0x26c)+_0x41235f+'\x20target=\x27_blank\x27\x20>\x20USDT\x20</a>'+_0x36155e(0x234)+_0xddd5d8+''),console[_0x36155e(0x153)](_0x36155e(0x1f0),_0x3a437b),console[_0x36155e(0x153)](_0x36155e(0x15a),_0x30033b);})):console[_0x40fe07(0x153)]('balanceOf\x20can\x20not\x20connect\x20to\x20the\x20smart\x20contract');});}async function ChooseNetworkButtonClick(_0x1993c3){var _0x290ac3=_0xba314c;if(_0x1993c3=='Avalanche'){}var _0x1b2ee5=document[_0x290ac3(0x1a0)]('SelectNetworkDropdown');console[_0x290ac3(0x153)](_0x1993c3),_0x1b2ee5[_0x290ac3(0x1fa)]=_0x290ac3(0x200),document[_0x290ac3(0x1a0)](_0x290ac3(0x23e))[_0x290ac3(0x1d3)]=_0x290ac3(0xed);}async function AddSelect(){var _0x1ef55a=_0xba314c,_0x62dacf=document[_0x1ef55a(0x1a0)](_0x1ef55a(0xec));_0x62dacf!==null&&$[_0x1ef55a(0x235)](UseTokens,function(_0x3bd138){var _0x25a1cb=_0x1ef55a;console['log']('UseTokens\x20:\x20',UseTokens[_0x3bd138][0x0]);var _0x446d4c=document[_0x25a1cb(0x1ff)]('option');_0x446d4c['innerHTML']=UseTokens[_0x3bd138][_0x25a1cb(0x161)],_0x446d4c['value']=UseTokens[_0x3bd138][_0x25a1cb(0x10a)],_0x62dacf[_0x25a1cb(0xdc)](_0x446d4c);});var _0x5bcc40=document['getElementById'](_0x1ef55a(0x198));_0x5bcc40!==null&&$[_0x1ef55a(0x235)](UseTokens,function(_0x494f33){var _0x4fde9f=_0x1ef55a;console[_0x4fde9f(0x153)](_0x4fde9f(0x14d),UseTokens[_0x494f33][0x0]);var _0x52f55c=document[_0x4fde9f(0x1ff)]('option');_0x52f55c[_0x4fde9f(0x1fa)]=UseTokens[_0x494f33]['symbol'],_0x52f55c['value']=UseTokens[_0x494f33][_0x4fde9f(0x10a)],_0x5bcc40[_0x4fde9f(0xdc)](_0x52f55c);}),document['getElementById']('SelectIWant')[_0x1ef55a(0x187)]=UseTokens[0x3][_0x1ef55a(0x10a)];}const updateTickPrice=async()=>{var _0x5628ce=_0xba314c;const _0x2036c9=await fetch(_0x5628ce(0xff)),_0x4b1617=await _0x2036c9[_0x5628ce(0x21f)]();console['log'](_0x5628ce(0x15d),_0x4b1617);var _0x5544f1='';},updateCardPrice=async()=>{var _0x84cffe=_0xba314c;const _0x344a9a=await fetch(_0x84cffe(0x1e4)),_0x18a3af=await _0x344a9a[_0x84cffe(0x21f)]();console[_0x84cffe(0x153)]('JsonResult:',_0x18a3af);var _0x15aeaa='';$[_0x84cffe(0x235)](_0x18a3af,function(_0x19342c){var _0x15867d=_0x84cffe;$('#SmallCardArea')['html'](''),_0x15aeaa+=_0x15867d(0x242),_0x15aeaa+=_0x15867d(0x1a3),_0x15aeaa+=_0x15867d(0x12b),_0x15aeaa+='<div\x20class=\x22text-center\x22>',_0x15aeaa+='<a\x20href=\x22#\x22>\x20<img\x20width=\x2250\x22\x20height=\x2250\x22\x20src=\x22',_0x15aeaa+=_0x15867d(0x23a)+_0x18a3af[_0x19342c]['id']+_0x15867d(0x220),_0x15aeaa+='\x22></a>',_0x15aeaa+='<div><h3\x20class=\x22no-margin\x22>',_0x15aeaa+=_0x18a3af[_0x19342c]['name'],_0x15aeaa+='</h3></div>',_0x15aeaa+=_0x15867d(0x1b5),_0x15aeaa+=_0x15867d(0x262),_0x15aeaa+=_0x15867d(0x21e),_0x15aeaa+=_0x15867d(0xe3),_0x15aeaa+=_0x18a3af[_0x19342c]['name'],_0x15aeaa+=_0x15867d(0x194),_0x15aeaa+=_0x18a3af[_0x19342c][_0x15867d(0x23d)],_0x15aeaa+=_0x15867d(0x268),_0x15aeaa+=_0x15867d(0x1ca),_0x15aeaa+='<p\x20class=\x22no-margin\x22><span\x20class=\x22\x22>',_0x15aeaa+=_0x18a3af[_0x19342c][_0x15867d(0x1ba)],_0x15aeaa+=_0x15867d(0x129),_0x15aeaa+=_0x15867d(0x12d);}),$('#SmallCardArea')[_0x84cffe(0x165)](_0x15aeaa);};updateCardPrice();let input=document['getElementById'](_0xba314c(0x1d4)),timeout=null;input[_0xba314c(0x241)](_0xba314c(0x24e),function(_0x2099d0){clearTimeout(timeout),timeout=setTimeout(function(){var _0x51512c=_0xc047;input[_0x51512c(0x1b6)]=!![],console[_0x51512c(0x153)]('Input\x20Value:',input[_0x51512c(0x187)]),ISendInputChange();},0x514);});
+	
+	
+	</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
