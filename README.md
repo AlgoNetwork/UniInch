@@ -3,7 +3,7 @@
 # UniInch
 
 
-UniInch is a DEFI exchange price aggregator. help you swap trading with best price.<br>
+UniInch is a DEFI exchange price aggregator. it help you swap trading with best price.<br>
 
 Support Blockchain:<br>
 Polygon<br>
